@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { languages } from "../i18n";
 
-export function NavBar({ t, lang, onLangChange, visible }) {
+export function NavBar({ t, lang, onLangChange, visible }){
   return (
     <nav
       className={`fixed w-full top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-700 ${
