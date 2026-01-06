@@ -16,9 +16,7 @@ export function NavBar({ t, lang, onLangChange, visible }){
         </Link>
 
         <div className="flex items-center space-x-10 text-sm tracking-wide">
-          <Link href="/projects" className="hover:text-gray-600 transition-colors duration-300">
-            {t.nav.projects}
-          </Link>
+          
           <Link href="/about" className="hover:text-gray-600 transition-colors duration-300">
             {t.nav.about}
           </Link>

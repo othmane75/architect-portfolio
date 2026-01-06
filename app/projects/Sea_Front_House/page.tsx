@@ -227,41 +227,51 @@ export default function ProjectPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Project 1 */}
               <a 
-                href="/projects/horizonte" 
-                className="group relative overflow-hidden"
-              >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm uppercase tracking-wider">Horizonte</span>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-                    Horizonte
-                  </h3>
-                  <p className="text-xs text-gray-500">Lake Como · 2024</p>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              </a>
+               href="/projects/union_tale" 
+               className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/union_tale/COLLAGE AXO.png"
+      alt="Union Tale"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      Union Tale
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
 
               {/* Project 2 */}
-              <a 
-                href="/projects/vertice" 
-                className="group relative overflow-hidden"
-              >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm uppercase tracking-wider">Vertice</span>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-                    Vertice
-                  </h3>
-                  <p className="text-xs text-gray-500">Tokyo · 2023</p>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              </a>
+<a 
+  href="/projects/30VPO" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/30VPO/BUILDING-AXO-PS.png"
+      alt="30 VPO"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      30 VPO
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
             </div>
           </div>
         </div>
