@@ -21,10 +21,9 @@ export default function ProjectsPage() {
   };
 
   const projects = [
-    { title: 'Horizonte', location: 'Lake Como', year: '2024' },
-    { title: 'Vertice', location: 'Tokyo', year: '2023' },
-    { title: 'Luz', location: 'Barcelona', year: '2022' },
-    { title: 'Delta', location: 'NYC', year: '2021' },
+    { title: '30 VPO' },
+    { title: 'Sea Front House'},
+    { title: 'Union tale' },
   ];
 
   return (

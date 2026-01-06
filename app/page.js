@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { NavBar } from './components/NavBar';
 import { getDictionary } from './i18n';
 
@@ -86,14 +88,68 @@ export default function Home() {
             {t.intro.subtitle}
           </h1>
           <div className="flex flex-wrap gap-3 text-sm">
-            <a href="/projects" className="px-5 py-3 bg-black text-white rounded-full hover:opacity-90 transition">
-              {t.intro.ctaProjects}
-            </a>
+            
             <a href="/about" className="px-5 py-3 border border-gray-300 rounded-full hover:border-black transition">
               {t.intro.ctaAbout}
             </a>
           </div>
         </header>
+
+        {/* Interactive Image with Clickable Areas */}
+        <div className="w-full py-12 relative">
+          <div className="relative w-full">
+            <Image
+              src="/images/mainpage/PAGEDEGARDE_text.png"
+              alt="Projects overview"
+              width={1400}
+              height={800}
+              className="w-full h-auto"
+            />
+            
+            {/* Clickable Areas */}
+            {/* Project 1 */}
+            <Link 
+              href="/projects/union_tale"
+              className="absolute group cursor-pointer transition-all duration-300"
+              style={{
+                left: '45%',
+                top: '4%',
+                width: '70%',
+                height: '10%',
+              }}
+            >
+              <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300 border-2 border-transparent group-hover:border-black/20"></div>
+            </Link>
+
+            {/* Project 2 */}
+            <Link 
+              href="/projects/Sea_Front_House"
+              className="absolute group cursor-pointer transition-all duration-300"
+              style={{
+                left: '0%',
+                top: '35%',
+                width: '100%',
+                height: '10%',
+              }}
+            >
+              <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300 border-2 border-transparent group-hover:border-black/20"></div>
+            </Link>
+
+            {/* Project 3 */}
+            <Link 
+              href="/projects/30VPO"
+              className="absolute group cursor-pointer transition-all duration-300"
+              style={{
+                left: '41%',
+                top: '69%',
+                width: '52%',
+                height: '26%',
+              }}
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-0 border-2 border-transparent group-hover:border/20"></div>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

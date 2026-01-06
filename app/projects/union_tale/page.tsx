@@ -123,9 +123,9 @@ export default function ProjectPage() {
       <Image
         src="/images/union_tale/DRAWING_Ceramic_Tiles.png"
         alt="Site plan"
-        width={300}
-        height={200}
-        className="w-full h-auto"
+        width={200}
+        height={100}
+        
       /> 
 
       <div className=" text-black text-sm leading-relaxed text-justify">
@@ -232,12 +232,12 @@ export default function ProjectPage() {
         {translations[lang].description3}
       </div>
 
+       
       <Image
         src="/images/union_tale/DRAWING_prefab_Steel_Panels.png"
         alt="Collage"
-        width={700}
-        height={500}
-        className="w-1/3 h-auto mx-auto"
+        width={300}
+        height={200}
       />
      
       
@@ -258,42 +258,52 @@ export default function ProjectPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Project 1 */}
-              <a 
-                href="/projects/horizonte" 
-                className="group relative overflow-hidden"
-              >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm uppercase tracking-wider">Horizonte</span>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-                    Horizonte
-                  </h3>
-                  <p className="text-xs text-gray-500">Lake Como · 2024</p>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              </a>
+<a 
+  href="/projects/30VPO" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/30VPO/BUILDING-AXO-PS.png"
+      alt="30 VPO"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      30 VPO
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
 
               {/* Project 2 */}
-              <a 
-                href="/projects/vertice" 
-                className="group relative overflow-hidden"
-              >
-                <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm uppercase tracking-wider">Vertice</span>
-                  </div>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-                    Vertice
-                  </h3>
-                  <p className="text-xs text-gray-500">Tokyo · 2023</p>
-                </div>
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-              </a>
+<a 
+  href="/projects/Sea_Front_House" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
+      alt="Sea Front House"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      Sea Front House
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
             </div>
           </div>
         </div>
