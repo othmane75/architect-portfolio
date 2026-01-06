@@ -13,6 +13,7 @@ const dict = {
     projects: {
       title: "Projects",
       subtitle: "Selected works",
+      seeMore: "See More Projects",
     },
     about: {
       title: "About Me",
@@ -31,6 +32,7 @@ const dict = {
     projects: {
       title: "Proyectos",
       subtitle: "Obras seleccionadas",
+      seeMore: "Ver Más Proyectos",
     },
     about: {
       title: "Sobre mí",
@@ -49,6 +51,7 @@ const dict = {
     projects: {
       title: "Projets",
       subtitle: "Réalisations choisies",
+      seeMore: "Voir Plus de Projets",
     },
     about: {
       title: "À propos",
@@ -60,4 +63,7 @@ const dict = {
 export function getDictionary(lang) {
   return dict[lang] || dict.en;
 }
+
+
+
 
