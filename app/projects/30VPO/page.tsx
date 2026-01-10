@@ -41,7 +41,6 @@ const translations = {
 export default function ProjectPage() {
   const [lang, setLang] = useState<"en" | "es" | "fr">("en");
 
-  // sync with global language preference
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem("lang");
@@ -62,8 +61,7 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="bg-white text-black min-h-screen">
-      {/* Shared banner / navbar */}
+    <div className="bg-[#E7E7CF] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
 
       <main className="py-20 pt-28">
@@ -77,8 +75,8 @@ export default function ProjectPage() {
           </p>
         </header>
 
-        {/* Main Image - almost full width */}
-        <div className="mb-20 px-4 sm:px-8 lg:px-12">
+        {/* Main Image */}
+        <div className="mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
           <Image
             src="/images/30VPO/BUILDING-AXO-PS.png"
             alt="Project axonometric view"
@@ -89,12 +87,12 @@ export default function ProjectPage() {
           />
         </div>
 
-       {/* Content in 3 columns — aligned with hero */}
-<div className="px-4 sm:px-8 lg:px-12">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+       {/* Content in 3 columns with better spacing */}
+<div className="px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
 
     {/* Column 1 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
       <Image
         src="/images/30VPO/SITE PLAN PRJ.png"
         alt="Site plan"
@@ -111,7 +109,7 @@ export default function ProjectPage() {
         className="w-full h-auto"
       />
 
-      <div className="pt-4 text-black text-sm leading-relaxed text-justify">
+      <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description2}
       </div>
 
@@ -142,13 +140,10 @@ export default function ProjectPage() {
         height={500}
         className="w-full h-auto"
       /> 
-
     </div>
 
-    
-
     {/* Column 2 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
       <Image
         src="/images/30VPO/collage.png"
         alt="Collage"
@@ -162,7 +157,7 @@ export default function ProjectPage() {
         alt="Elevation Bolivar"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
 
       <Image
@@ -170,7 +165,7 @@ export default function ProjectPage() {
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />    
 
       <Image
@@ -202,16 +197,13 @@ export default function ProjectPage() {
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       /> 
-
-      
-    
     </div>
 
-    {/* Column 3 — text + image */}
-    <div className="flex flex-col gap-6">
-      <div className="p-9 text-black text-sm leading-relaxed text-justify">
+    {/* Column 3 */}
+    <div className="flex flex-col gap-10">
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description1}
       </div>
 
@@ -236,10 +228,10 @@ export default function ProjectPage() {
         alt="AXO CONSTRUCTIF GENERAL"
         width={700}
         height={500}
-        className="w-full h-auto pt-10"
+        className="w-full h-auto"
       />
 
-      <div className="pt-4 text-black text-sm leading-relaxed text-justify">
+      <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description3}
       </div>
 
@@ -262,8 +254,6 @@ export default function ProjectPage() {
       <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description5}
       </div>
-     
-      
     </div>
 
   </div>
@@ -303,7 +293,6 @@ export default function ProjectPage() {
 
   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
 </a>
-
 
               {/* Project 2 */}
               <a 

@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-white text-black min-h-screen overflow-hidden">
+    <div className="bg-[#E7E7CF] text-black min-h-screen overflow-hidden">
       {/* Animated Letters Intro */}
       {animationStage < 2 && (
         <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
@@ -80,23 +80,25 @@ export default function Home() {
           animationStage === 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
-        <header className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-          <p className="text-sm uppercase tracking-[0.35em] text-gray-500 mb-4">
-            {t.intro.hero}
-          </p>
-          <h1 className="text-4xl md:text-6xl font-light leading-tight mb-6">
-            {t.intro.subtitle}
-          </h1>
-          <div className="flex flex-wrap gap-3 text-sm">
-            
-            <a href="/about" className="px-5 py-3 border border-gray-300 rounded-full hover:border-black transition">
-              {t.intro.ctaAbout}
-            </a>
-          </div>
-        </header>
+       <header className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+  <p className="text-sm uppercase tracking-[0.35em] text-gray-500 mb-4">
+    {t.intro.hero}
+  </p>
+  <h1 className="text-4xl md:text-6xl font-light leading-tight mb-2 italic text-gray-800">
+    {t.intro.subtitle}
+  </h1>
+  <p className="text-xl md:text-2xl font-light text-gray-600 italic">
+    {t.intro.author}
+  </p>
+  <div className="flex flex-wrap gap-3 text-sm mt-6">
+    <a href="/about" className="px-5 py-3 border border-gray-300 rounded-full hover:border-black transition">
+      {t.intro.ctaAbout}
+    </a>
+  </div>
+</header>
 
         {/* Interactive Image with Clickable Areas */}
-        <div className="w-full py-12 relative">
+        <div className="w-2/3 py-12 relative mx-auto">
           <div className="relative w-full">
             <Image
               src="/images/mainpage/PAGEDEGARDE_text.png"
