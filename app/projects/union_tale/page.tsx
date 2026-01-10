@@ -10,9 +10,9 @@ const translations = {
     title: "UNION TALE",
     subtitle: "A Case Study 21 Extension",
     description1:
-      "This project inscribes itself in the third semester of the Architectural Design unit. The exercise is the creation an extension of Pierre Koenig ’s Bailey house answering the need of an at home office for the psychologist Walter Bailey and his wife Mary Bailey. The placement of the addition is key to respect the original house and create a coherent and cohesive design.",
+      "This project inscribes itself in the third semester of the Architectural Design unit. The exercise is the creation an extension of Pierre Koenig 's Bailey house answering the need of an at home office for the psychologist Walter Bailey and his wife Mary Bailey. The placement of the addition is key to respect the original house and create a coherent and cohesive design.",
     description2: "The strategy for the extension was the addition of a floor. Using the same principles as the original house, only adding a light stair case on the west facade to guide the patience to the office without disturbing the privacy of the house. The position of the extension on the higher floor lets for the necessary amount of privacy and proximity. The office does not touch directly the roof but rather floating on top of it. As an addition, we have a unique tile cover creates the union between original house and addition.",
-    description3: "The extension is a consultation room for the patients and Walter Bailey’s office. The layout keeps the balance of openness from the original house without compromising the privacy of the patients. The strategy used to allow for the modularity are the sliding door, that permit a more or less divided distribution. The placement of the openings and the role of light is also key to recreate the sensation of openness and connection to the exterior found in Koenig’s work.",
+    description3: "The extension is a consultation room for the patients and Walter Bailey's office. The layout keeps the balance of openness from the original house without compromising the privacy of the patients. The strategy used to allow for the modularity are the sliding door, that permit a more or less divided distribution. The placement of the openings and the role of light is also key to recreate the sensation of openness and connection to the exterior found in Koenig's work.",
     description4: "The façades are composed of prefabricated steel panels and the ceramic cover is also prefabricated. It works hanging on a steel structure that acts as a frame with a U-shape hooks that allow permit the hanging of the panels. The tile cover is laying over the roof with metal pieces that allow a space between the two elements."
 },
   es: {
@@ -38,7 +38,6 @@ const translations = {
 export default function ProjectPage() {
   const [lang, setLang] = useState<"en" | "es" | "fr">("en");
 
-  // sync with global language preference
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem("lang");
@@ -59,8 +58,7 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="bg-white text-black min-h-screen">
-      {/* Shared banner / navbar */}
+    <div className="bg-[#E7E7CF] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
 
       <main className="py-20 pt-28">
@@ -74,7 +72,7 @@ export default function ProjectPage() {
           </p>
         </header>
 
-        {/* Main Image - almost full width */}
+        {/* Main Image */}
         <div className="mb-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
           <Image
             src="/images/union_tale/COLLAGE AXO.png"
@@ -86,12 +84,12 @@ export default function ProjectPage() {
           />
         </div>
 
-       {/* Content in 3 columns — aligned with hero */}
-<div className="px-4 sm:px-8 lg:px-12">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+       {/* Content in 3 columns with better spacing */}
+<div className="px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
 
     {/* Column 1 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
       <Image
         src="/images/union_tale/SITEPLAN_CASESTUDY21.png"
         alt="Site plan"
@@ -105,10 +103,10 @@ export default function ProjectPage() {
         alt="Site plan"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       /> 
 
-      <div className="pt-9 text-black text-sm leading-relaxed text-justify">
+      <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description2}
       </div>
 
@@ -117,7 +115,7 @@ export default function ProjectPage() {
         alt="Site plan"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
 
       <Image
@@ -125,10 +123,10 @@ export default function ProjectPage() {
         alt="Site plan"
         width={200}
         height={100}
-        
+        className="w-2/3 h-auto mx-auto"
       /> 
 
-      <div className=" text-black text-sm leading-relaxed text-justify">
+      <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description4}
       </div>
 
@@ -139,14 +137,10 @@ export default function ProjectPage() {
         height={200}
         className="w-full h-auto"
       />
-      
-
     </div>
 
-    
-
     {/* Column 2 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
       <Image
         src="/images/union_tale/AXO_CASESTUDY21_SOUTHEAST.png"
         alt="Collage"
@@ -160,7 +154,7 @@ export default function ProjectPage() {
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
 
      <Image
@@ -168,7 +162,7 @@ export default function ProjectPage() {
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
 
       <Image
@@ -176,7 +170,7 @@ export default function ProjectPage() {
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto "
+        className="w-full h-auto"
       />
 
       <Image
@@ -192,15 +186,13 @@ export default function ProjectPage() {
         alt="Site plan"
         width={300}
         height={200}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
-      
-    
     </div>
 
-    {/* Column 3 — text + image */}
-    <div className="flex flex-col gap-6">
-      <div className="p-9 text-black text-sm leading-relaxed text-justify">
+    {/* Column 3 */}
+    <div className="flex flex-col gap-10">
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description1}
       </div>
 
@@ -209,7 +201,7 @@ export default function ProjectPage() {
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto pt-20"
+        className="w-full h-auto"
       />
 
      <Image
@@ -228,19 +220,17 @@ export default function ProjectPage() {
         className="w-full h-auto"
       />
 
-     <div className="text-black text-sm leading-relaxed text-justify pt-10">
+     <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description3}
       </div>
 
-       
       <Image
         src="/images/union_tale/DRAWING_prefab_Steel_Panels.png"
         alt="Collage"
         width={300}
         height={200}
+        className="w-2/3 h-auto mx-auto"
       />
-     
-      
     </div>
 
   </div>

@@ -12,28 +12,29 @@ const translations = {
     description1:
       "The Seafront Towers are a response to a living and working space based on the concept of industrialization on a plot of 160 m x 20 m. The proposal is placed in Santa Cruz de Tenerife's coastline. The clients are an agronomist and an architect with a child. The proposal first solves the plot through a 1x1 grid of parallels that permit the creation of the garden on different levels with different typologies of vegetation. From there, the house and office flourish into the garden. The Seafront Towers solves the visibility to the ocean through the different levels and the spaces that are generated.",
     description2: "As per the industrialised nature of the project, the interior layout follows a modular and clear system. The different areas are divided through a sequence of 4x4 modules, with different levels of intimacy depending on the floor and placement in the plot without compromising the views to the garden or the sea. The house is composed of three different levels with the circulation on the north and south façade. The play of the stair cases is a guide through the house going from the common areas to the most private ones. Due to the sunny condition of Santa Cruz de Tenerife, an extensive solar protection protects the south façades. To keep the industrialized feel of the project, the shadings are perforated steel panels, movable on the balconies and fixed on the stairs.",
-},
+    description3: "The constructive system is based on HEB pillars and beams that connects through an intermediate piece with plates on the end of the structural pieces. The whole is bolted together, and to ensure greater stability each module is tensed with cables on the vertical and horizontal planes. The structure permits for a very open and clear interior distribution. The slabs are mixed concrete with a CLT finish, the enclosure is either glass or opaque panels made of steel and insulation.",
+  },
   es: {
     title: "SEA FRONT HOUSE",
     subtitle: "Habitar la ciudad a través de la permeabilidad",
     description1:
       "Las Torres Seafront son una respuesta a un espacio de vida y trabajo basado en el concepto de industrialización en una parcela de 160 m x 20 m. La propuesta se ubica en el litoral de Santa Cruz de Tenerife. Los clientes son un agrónomo y un arquitecto con un hijo. La propuesta resuelve en primer lugar la parcela mediante una cuadrícula de 1x1 de paralelas que permiten la creación del jardín en diferentes niveles con diferentes tipologías de vegetación. A partir de ahí, la casa y la oficina florecen en el jardín. Las Torres Frente al Mar resuelven la visibilidad al océano a través de los diferentes niveles y los espacios que se generan.",
     description2: "Dada la naturaleza industrial del proyecto, la distribución interior sigue un sistema modular y claro. Las diferentes zonas se dividen mediante una secuencia de módulos de 4x4, con diferentes niveles de intimidad en función de la planta y la ubicación en la parcela, sin comprometer las vistas al jardín o al mar. La casa se compone de tres niveles diferentes con la circulación en las fachadas norte y sur. El juego de las escaleras es una guía a través de la casa que va desde las zonas comunes a las más privadas. Debido a las condiciones soleadas de Santa Cruz de Tenerife, una amplia protección solar protege las fachadas sur. Para mantener el aspecto industrializado del proyecto, las persianas son paneles de acero perforado, móviles en los balcones y fijos en las escaleras.",
-},
+    description3: "El sistema constructivo se basa en pilares y vigas HEB que se conectan mediante una pieza intermedia con placas en el extremo de las piezas estructurales. Todo está atornillado, y para garantizar una mayor estabilidad, cada módulo se tensa con cables en los planos vertical y horizontal. La estructura permite una distribución interior muy abierta y clara. Losas son de hormigón mixto con un acabado de CLT, el cerramiento es de vidrio o paneles opacos de acero e aislamiento.",
+  },
   fr: {
     title: "SEA FRONT HOUSE",
     subtitle: "Habiter la ville à travers la perméabilité",
     description1:
       "Les Seafront Towers sont une réponse à un espace de vie et de travail basé sur le concept d'industrialisation sur un terrain de 160 m x 20 m. Le projet est situé sur le littoral de Santa Cruz de Tenerife. Les clients sont un agronome et un architecte avec un enfant. La proposition résout d'abord le terrain grâce à une grille de parallèles 1x1 qui permet la création d'un jardin sur différents niveaux avec différentes typologies de végétation. À partir de là, la maison et le bureau s'épanouissent dans le jardin. Les Seafront Towers résolvent la question de la visibilité sur l'océan grâce aux différents niveaux et aux espaces qui sont générés.",
     description2: "Conformément à la nature industrialisée du projet, l'aménagement intérieur suit un système modulaire et clair. Les différentes zones sont divisées par une séquence de modules 4x4, avec différents niveaux d'intimité selon l'étage et l'emplacement sur le terrain, sans compromettre la vue sur le jardin ou la mer. La maison se compose de trois niveaux différents, avec une circulation sur les façades nord et sud. Le jeu des escaliers guide à travers la maison, des espaces communs aux espaces les plus privés. En raison de l'ensoleillement de Santa Cruz de Tenerife, une protection solaire étendue protège les façades sud. Afin de conserver l'aspect industriel du projet, les stores sont des panneaux en acier perforé, mobiles sur les balcons et fixes sur les escaliers.",
-
+    description3: "Le système constructif est basé sur des piliers et des poutres HEB qui se connectent par une pièce intermédiaire avec des plaques à l'extrémité des pièces structurelles. L'ensemble est boulonné, et pour assurer une plus grande stabilité, chaque module est tendu avec des câbles sur les plans vertical et horizontal. La structure permet une distribution intérieure très ouverte et claire. Les dalles sont en béton mixte avec une finition CLT, l'enveloppe est en verre ou en panneaux opaques en acier et isolation.",
 },
 };
 
 export default function ProjectPage() {
   const [lang, setLang] = useState<"en" | "es" | "fr">("en");
 
-  // sync with global language preference
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem("lang");
@@ -54,8 +55,7 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="bg-white text-black min-h-screen">
-      {/* Shared banner / navbar */}
+    <div className="bg-[#E7E7CF] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
 
       <main className="py-20 pt-28">
@@ -69,7 +69,7 @@ export default function ProjectPage() {
           </p>
         </header>
 
-        {/* Main Image - almost full width */}
+        {/* Main Image */}
         <div className="mb-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
            <Image
              src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
@@ -81,20 +81,19 @@ export default function ProjectPage() {
             />
         </div>
 
-
-       {/* Content in 3 columns — aligned with hero */}
-<div className="px-4 sm:px-8 lg:px-12">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+       {/* Content in 3 columns with better spacing */}
+<div className="px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
 
     {/* Column 1 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
 
-      <div className=" text-black text-sm leading-relaxed text-justify pt-10">
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description1}
       </div>
 
       <Image
-        src="/images/sea_front_house/p_DESPATCHO_OFFICINA.png"
+        src="/images/sea_front_house/p_DESPATCHO_OFFICINA_1.png"
         alt="Geometry schemes"
         width={700}
         height={500}
@@ -102,7 +101,15 @@ export default function ProjectPage() {
       />
 
       <Image
-        src="/images/sea_front_house/STRUCTURE_EXPLOTED-01.png"
+        src="/images/sea_front_house/STRUCTURE.png"
+        alt="Geometry schemes78"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+      />
+
+      <Image
+        src="/images/sea_front_house/ALZADO_FACHADANORTE_1.png"
         alt="Geometry schemes"
         width={700}
         height={500}
@@ -110,31 +117,47 @@ export default function ProjectPage() {
       />
 
       <Image
-        src="/images/sea_front_house/ALZADO_FACHADANORTE.png"
-        alt="Geometry schemes"
-        width={700}
-        height={500}
-        className="w-full h-auto"
-      />
-
-      <Image
-        src="/images/sea_front_house/JOINT_2.png"
+        src="/images/sea_front_house/JOINT_2_1.png"
         alt="Site plan"
         width={700}
         height={500}
         className="w-full h-auto"
-       />    
+       />   
 
-      
+       <Image
+        src="/images/sea_front_house/p_SECUNDA_1.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />   
+
+       <Image
+        src="/images/sea_front_house/STRUCTURE_TOWERSEXPLOTED_1.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />  
+
+       <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description3}
+      </div>
+
+      <Image
+        src="/images/sea_front_house/image1.jpeg"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       /> 
 
     </div>
-
-    
 
     {/* Column 2 */}
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-10">
       <Image
-        src="/images/sea_front_house/REJILLA_JARDIN.png"
+        src="/images/sea_front_house/REJILLA_JARDIN_1.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -142,7 +165,7 @@ export default function ProjectPage() {
        />
 
       <Image
-        src="/images/sea_front_house/JOINT_1.png"
+        src="/images/sea_front_house/JOINT_1_1.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -150,22 +173,42 @@ export default function ProjectPage() {
        />
 
       <Image
-        src="/images/sea_front_house/p_PRIMERA.png"
+        src="/images/sea_front_house/p_PRIMERA_1.png"
         alt="Site plan"
         width={700}
         height={500}
         className="w-full h-auto"
        />
 
-    
+       <Image
+        src="/images/sea_front_house/ALZADO_FACHADASUR_1.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />
+
+       <Image
+        src="/images/sea_front_house/STRUCTURE_TOWER.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />
+
+       <Image
+        src="/images/sea_front_house/image2.jpeg"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />
     </div>
 
-    {/* Column 3 — text + image */}
-    <div className="flex flex-col gap-6">
-      
-
+    {/* Column 3 */}
+    <div className="flex flex-col gap-10">
       <Image
-        src="/images/sea_front_house/PLANOCONTEXTUAL.png"
+        src="/images/sea_front_house/PLANOCONTEXTUAL_1.png"
         alt="Typology housing"
         width={700}
         height={500}
@@ -173,7 +216,7 @@ export default function ProjectPage() {
       />
 
       <Image
-        src="/images/sea_front_house/p_BAJA.png"
+        src="/images/sea_front_house/p_BAJA_1.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -181,19 +224,19 @@ export default function ProjectPage() {
        />
 
       <Image
-        src="/images/sea_front_house/SECCION_TRANSVERSAL-01.png"
+        src="/images/sea_front_house/SECCION_TRANSVERSAL_1.png"
         alt="Site plan"
         width={700}
         height={500}
         className="w-full h-auto"
        />
 
-      <div className=" text-black text-sm leading-relaxed text-justify">
-        {translations[lang].description1}
+      <div className="text-black text-sm leading-relaxed text-justify">
+        {translations[lang].description2}
       </div>  
       
       <Image
-        src="/images/sea_front_house/SECCION_LONGITUDINAL.png"
+        src="/images/sea_front_house/SECCION_LONGITUDINAL_1.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -201,14 +244,20 @@ export default function ProjectPage() {
        />
 
       <Image
-        src="/images/sea_front_house/p_TERCERA.png"
+        src="/images/sea_front_house/p_TERCERA_1.png"
         alt="Site plan"
         width={700}
         height={500}
         className="w-full h-auto"
        />
-     
-      
+
+       <Image
+        src="/images/sea_front_house/image3.jpeg"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+       />
     </div>
 
   </div>

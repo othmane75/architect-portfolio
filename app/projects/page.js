@@ -27,7 +27,7 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <div className="bg-white text-black min-h-screen">
+    <div className="bg-[#E7E7CF] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
 
       <header className="pt-28 max-w-7xl mx-auto px-6 pb-12">
