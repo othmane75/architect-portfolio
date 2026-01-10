@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { NavBar } from "../../components/NavBar";
+import { GalleryImage } from "../../components/ImageGallery";
 import { getDictionary } from "../../i18n";
 
 const translations = {
@@ -56,6 +57,347 @@ export default function ProjectPage() {
       }
     }
   };
+
+  // Gallery images array
+  const galleryImages = [
+    { src: "/images/union_tale/COLLAGE AXO.png", alt: "Project axonometric view" },
+    { src: "/images/union_tale/SITEPLAN_CASESTUDY21.png", alt: "Site plan" },
+    { src: "/images/union_tale/AXO_CASESTUDY21_NORTHEAST.png", alt: "Northeast axonometric" },
+    { src: "/images/union_tale/ELEVATION_CASESTUDY21_EAST_100.png", alt: "East elevation" },
+    { src: "/images/union_tale/DRAWING_Ceramic_Tiles.png", alt: "Ceramic tiles drawing" },
+    { src: "/images/union_tale/IMG_GRANDEMAQUETTE_2.png", alt: "Large model" },
+    { src: "/images/union_tale/AXO_CASESTUDY21_SOUTHEAST.png", alt: "Southeast axonometric" },
+    { src: "/images/union_tale/FP_CASESTUDY21_1F_100.png", alt: "First floor plan" },
+    { src: "/images/union_tale/SECTION_CASESTUDY21_TRANSVERSAL_100.png", alt: "Transversal section" },
+    { src: "/images/union_tale/FP_CASESTUDY21_EXTENSION_50.png", alt: "Extension floor plan" },
+    { src: "/images/union_tale/SECTION_CASESTUDY21_LONGITUDINAL_100.png", alt: "Longitudinal section" },
+    { src: "/images/union_tale/IMG_GRANDEMAQUETTE_1.png", alt: "Large model 1" },
+    { src: "/images/union_tale/ELEVATION_CASESTUDY21_SOUTH_100.png", alt: "South elevation" },
+    { src: "/images/union_tale/IMG_PETITMAQUETTE_1.png", alt: "Small model" },
+    { src: "/images/union_tale/FP_CASESTUDY21_2F_100.png", alt: "Second floor plan" },
+    { src: "/images/union_tale/DRAWING_prefab_Steel_Panels.png", alt: "Steel panels drawing" },
+  ];
+
+  return (
+    <div className="bg-[#FAF9F6] text-black min-h-screen">
+      <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
+
+      <main className="py-20 pt-28">
+        {/* Header */}
+        <header className="max-w-5xl mx-auto px-6 mb-12">
+          <h1 className="text-2xl font-medium text-center mb-2">
+            {translations[lang].title}
+          </h1>
+          <p className="text-center text-sm text-gray-600">
+            {translations[lang].subtitle}
+          </p>
+        </header>
+
+        {/* Main Image */}
+        <div className="mb-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+          <GalleryImage
+            src="/images/union_tale/COLLAGE AXO.png"
+            alt="Project axonometric view"
+            width={1900}
+            height={900}
+            className="w-full h-auto"
+            galleryImages={galleryImages}
+            galleryIndex={0}
+          />
+        </div>
+
+       {/* Content in 3 columns with better spacing */}
+<div className="px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
+
+    {/* Column 1 */}
+    <div className="flex flex-col gap-10">
+      <GalleryImage
+        src="/images/union_tale/SITEPLAN_CASESTUDY21.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={1}
+      />
+
+      <GalleryImage
+        src="/images/union_tale/AXO_CASESTUDY21_NORTHEAST.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={2}
+      /> 
+
+      <div className="text-black text-sm leading-relaxed text-justify">
+        {translations[lang].description2}
+      </div>
+
+      <GalleryImage
+        src="/images/union_tale/ELEVATION_CASESTUDY21_EAST_100.png"
+        alt="Site plan"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={3}
+      />
+
+      <GalleryImage
+        src="/images/union_tale/DRAWING_Ceramic_Tiles.png"
+        alt="Site plan"
+        width={200}
+        height={100}
+        className="w-2/3 h-auto mx-auto"
+        galleryImages={galleryImages}
+        galleryIndex={4}
+      /> 
+
+      <div className="text-black text-sm leading-relaxed text-justify">
+        {translations[lang].description4}
+      </div>
+
+      <GalleryImage
+        src="/images/union_tale/IMG_GRANDEMAQUETTE_2.png"
+        alt="Site plan"
+        width={300}
+        height={200}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={5}
+      />
+    </div>
+
+    {/* Column 2 */}
+    <div className="flex flex-col gap-10">
+      <GalleryImage
+        src="/images/union_tale/AXO_CASESTUDY21_SOUTHEAST.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={6}
+      />
+
+       <GalleryImage
+        src="/images/union_tale/FP_CASESTUDY21_1F_100.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={7}
+      />
+
+     <GalleryImage
+        src="/images/union_tale/SECTION_CASESTUDY21_TRANSVERSAL_100.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={8}
+      />
+
+      <GalleryImage
+        src="/images/union_tale/FP_CASESTUDY21_EXTENSION_50.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={9}
+      />
+
+      <GalleryImage
+        src="/images/union_tale/SECTION_CASESTUDY21_LONGITUDINAL_100.png"
+        alt="Site plan"
+        width={300}
+        height={200}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={10}
+      /> 
+
+      <GalleryImage
+        src="/images/union_tale/IMG_GRANDEMAQUETTE_1.png"
+        alt="Site plan"
+        width={300}
+        height={200}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={11}
+      />
+    </div>
+
+    {/* Column 3 */}
+    <div className="flex flex-col gap-10">
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description1}
+      </div>
+
+      <GalleryImage
+        src="/images/union_tale/ELEVATION_CASESTUDY21_SOUTH_100.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={12}
+      />
+
+     <GalleryImage
+        src="/images/union_tale/IMG_PETITMAQUETTE_1.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={13}
+      />
+
+      <GalleryImage
+        src="/images/union_tale/FP_CASESTUDY21_2F_100.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={14}
+      />
+
+     <div className="text-black text-sm leading-relaxed text-justify">
+        {translations[lang].description3}
+      </div>
+
+      <GalleryImage
+        src="/images/union_tale/DRAWING_prefab_Steel_Panels.png"
+        alt="Collage"
+        width={300}
+        height={200}
+        className="w-2/3 h-auto mx-auto"
+        galleryImages={galleryImages}
+        galleryIndex={15}
+      />
+    </div>
+
+  </div>
+</div>
+
+        {/* Gallery Modal */}
+        {galleryOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+            {/* Close button */}
+            <button
+              onClick={closeGallery}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors z-60"
+            >
+              ✕
+            </button>
+
+            {/* Previous button */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            >
+              ‹
+            </button>
+
+            {/* Next button */}
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            >
+              ›
+            </button>
+
+            {/* Main image */}
+            <div className="max-w-[90vw] max-h-[90vh] relative">
+              <Image
+                src={galleryImages[currentImageIndex].src}
+                alt={galleryImages[currentImageIndex].alt}
+                width={1200}
+                height={800}
+                className="max-w-full max-h-full object-contain"
+                priority
+              />
+            </div>
+
+            {/* Image counter */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
+              {currentImageIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+        {/* See More Projects Section */}
+        <div className="mt-32 mb-20 border-t border-gray-200 pt-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="mb-12">
+              <p className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-2">
+                {t.projects.seeMore}
+              </p>
+              <div className="h-[1px] w-16 bg-black"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Project 1 */}
+<a 
+  href="/projects/30VPO" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/30VPO/BUILDING-AXO-PS.png"
+      alt="30 VPO"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      30 VPO
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
+
+              {/* Project 2 */}
+<a 
+  href="/projects/Sea_Front_House" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
+      alt="Sea Front House"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      Sea Front House
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  );
+}
 
   return (
     <div className="bg-[#FAF9F6] text-black min-h-screen">

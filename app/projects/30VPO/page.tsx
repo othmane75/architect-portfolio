@@ -40,6 +40,8 @@ const translations = {
 
 export default function ProjectPage() {
   const [lang, setLang] = useState<"en" | "es" | "fr">("en");
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -59,6 +61,69 @@ export default function ProjectPage() {
       }
     }
   };
+
+  // Gallery images array
+  const galleryImages = [
+    { src: "/images/30VPO/BUILDING-AXO-PS.png", alt: "Building axonometric" },
+    { src: "/images/30VPO/SITE PLAN PRJ.png", alt: "Site plan" },
+    { src: "/images/30VPO/SQUEMES_GEOMETRY.png", alt: "Geometry schemes" },
+    { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology" },
+    { src: "/images/30VPO/SECTION Point de fuite .png", alt: "Section point de fuite" },
+    { src: "/images/30VPO/AXO SECTION DETAIL TYPO.png", alt: "Axonometric section detail" },
+    { src: "/images/30VPO/collage.png", alt: "Project collage" },
+    { src: "/images/30VPO/elevation bolivar.png", alt: "Bolivar elevation" },
+    { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology 2" },
+    { src: "/images/30VPO/50M2_TYPO.png", alt: "50m2 typology" },
+    { src: "/images/30VPO/F6.png", alt: "Floor 6" },
+    { src: "/images/30VPO/section transversal.png", alt: "Transversal section" },
+    { src: "/images/30VPO/F11.png", alt: "Floor 11" },
+    { src: "/images/30VPO/F0.png", alt: "Floor 0" },
+    { src: "/images/30VPO/AXO CONSTRUCTIF GENERAL PS .png", alt: "General constructive axonometric" },
+    { src: "/images/30VPO/section bolivar to vallcarca.png", alt: "Bolivar to Vallcarca section" },
+    { src: "/images/30VPO/70M2_TYPO.png", alt: "70m2 typology" },
+    { src: "/images/30VPO/F9.png", alt: "Floor 9" },
+  ];
+
+  const openGallery = (index: number) => {
+    setCurrentImageIndex(index);
+    setGalleryOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeGallery = () => {
+    setGalleryOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!galleryOpen) return;
+      
+      switch (e.key) {
+        case 'ArrowRight':
+          nextImage();
+          break;
+        case 'ArrowLeft':
+          prevImage();
+          break;
+        case 'Escape':
+          closeGallery();
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [galleryOpen]);
 
   return (
     <div className="bg-[#FAF9F6] text-black min-h-screen">
@@ -82,8 +147,9 @@ export default function ProjectPage() {
             alt="Project axonometric view"
             width={1900}
             height={900}
-            className="w-full h-auto"
+            className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
             priority
+            onClick={() => openGallery(0)}
           />
         </div>
 
@@ -98,7 +164,8 @@ export default function ProjectPage() {
         alt="Site plan"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(1)}
       />
 
       <Image
@@ -106,7 +173,8 @@ export default function ProjectPage() {
         alt="Geometry schemes"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(2)}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
@@ -118,7 +186,8 @@ export default function ProjectPage() {
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(3)}
       />  
 
      <Image
@@ -126,7 +195,8 @@ export default function ProjectPage() {
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(4)}
       />   
 
       <div className="text-black text-sm leading-relaxed text-justify">
@@ -138,7 +208,8 @@ export default function ProjectPage() {
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(5)}
       /> 
     </div>
 
@@ -149,7 +220,8 @@ export default function ProjectPage() {
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(6)}
       />
 
       <Image
@@ -157,7 +229,8 @@ export default function ProjectPage() {
         alt="Elevation Bolivar"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(7)}
       />
 
       <Image
@@ -165,7 +238,8 @@ export default function ProjectPage() {
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(8)}
       />    
 
       <Image
@@ -173,7 +247,8 @@ export default function ProjectPage() {
         alt="50M2 TYPO"
         width={700}
         height={600}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(9)}
       />   
 
       <Image
@@ -181,7 +256,8 @@ export default function ProjectPage() {
         alt="TWO HOUSING OF 70m2 AND COMMUNAL SPACE WITH DOUBLE HEIGHT"
         width={700}
         height={600}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(10)}
       /> 
 
      <Image
@@ -189,7 +265,8 @@ export default function ProjectPage() {
         alt="TWO HOUSING OF 70m2 AND COMMUNAL SPACE WITH DOUBLE HEIGHT"
         width={700}
         height={600}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(11)}
       /> 
 
      <Image
@@ -197,7 +274,8 @@ export default function ProjectPage() {
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(12)}
       /> 
     </div>
 
@@ -212,7 +290,8 @@ export default function ProjectPage() {
         alt="Typology housing"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(13)}
       />
 
       <Image
@@ -220,7 +299,8 @@ export default function ProjectPage() {
         alt="AXO CONSTRUCTIF GENERAL"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(14)}
       />
 
       <Image
@@ -228,7 +308,8 @@ export default function ProjectPage() {
         alt="AXO CONSTRUCTIF GENERAL"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(15)}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
@@ -240,7 +321,8 @@ export default function ProjectPage() {
         alt="70M2 TYPO"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(16)}
       />
 
       <Image
@@ -248,7 +330,8 @@ export default function ProjectPage() {
         alt="70M2 TYPO"
         width={700}
         height={500}
-        className="w-full h-auto"
+        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={() => openGallery(17)}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
@@ -321,6 +404,52 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
+
+        {/* Gallery Modal */}
+        {galleryOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+            {/* Close button */}
+            <button
+              onClick={closeGallery}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors z-60"
+            >
+              ✕
+            </button>
+
+            {/* Previous button */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            >
+              ‹
+            </button>
+
+            {/* Next button */}
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            >
+              ›
+            </button>
+
+            {/* Main image */}
+            <div className="max-w-[90vw] max-h-[90vh] relative">
+              <Image
+                src={galleryImages[currentImageIndex].src}
+                alt={galleryImages[currentImageIndex].alt}
+                width={1200}
+                height={800}
+                className="max-w-full max-h-full object-contain"
+                priority
+              />
+            </div>
+
+            {/* Image counter */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
+              {currentImageIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+        )}
 
       </main>
     </div>
