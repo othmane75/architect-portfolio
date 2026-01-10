@@ -21,7 +21,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="bg-[#E7E9E7] text-black min-h-screen">
+    <div className="bg-[#F9F8F5] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
       
       <div className="pt-32 pb-20 max-w-5xl mx-auto px-6">
