@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-[#F4F5F0] text-black min-h-screen overflow-hidden">
+    <div className="bg-[#FAF9F6] text-black min-h-screen overflow-hidden">
       {/* Animated Letters Intro */}
       {animationStage < 2 && (
         <div className="fixed inset-0 flex items-center justify-center bg-white z-50">

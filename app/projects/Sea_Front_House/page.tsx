@@ -55,7 +55,7 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="bg-[#F4F5F0] text-black min-h-screen">
+    <div className="bg-[#FAF9F6] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
 
       <main className="py-20 pt-28">

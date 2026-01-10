@@ -6,7 +6,7 @@ import { languages } from "../i18n";
 export function NavBar({ t, lang, onLangChange, visible }){
   return (
     <nav
-      className={`fixed w-full top-0 z-40 bg-[#F4F5F0] backdrop-blur-md border-b border-gray-200 transition-all duration-700 ${
+      className={`fixed w-full top-0 z-40 bg-[#FAF9F6] backdrop-blur-md border-b border-gray-200 transition-all duration-700 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
       }`}
     >
