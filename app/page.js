@@ -46,7 +46,7 @@ export default function Home() {
     <div className="bg-[#FAF9F6] text-black min-h-screen overflow-hidden">
       {/* Animated Letters Intro */}
       {animationStage < 2 && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-[#FAF9F6] z-50">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,0,0,0.05),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(0,0,0,0.05),transparent_35%)] blur-3xl opacity-80" />
           <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white opacity-70" />
           <div className="relative flex space-x-4 md:space-x-6">
@@ -80,18 +80,18 @@ export default function Home() {
           animationStage === 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
-       <header className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-  <p className="text-sm uppercase tracking-[0.35em] text-gray-500 mb-4">
+       <header className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+  <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-gray-500 mb-3 sm:mb-4">
     {t.intro.hero}
   </p>
-  <h1 className="text-2xl md:text-4xl font-light leading-tight mb-2 italic text-gray-800">
+  <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-tight mb-2 italic text-gray-800">
     {t.intro.subtitle}
   </h1>
   <p className="text-base md:text-lg font-light text-gray-600 italic">
     {t.intro.author}
   </p>
-  <div className="flex flex-wrap gap-3 text-sm mt-6">
-    <a href="/about" className="px-5 py-3 border border-gray-300 rounded-full hover:border-black transition">
+  <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
+    <a href="/about" className="px-4 sm:px-5 py-2 sm:py-3 border border-gray-300 rounded-full hover:border-black transition text-sm">
       {t.intro.ctaAbout}
     </a>
   </div>

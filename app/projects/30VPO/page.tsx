@@ -96,7 +96,7 @@ export default function ProjectPage() {
         </header>
 
         {/* Main Image */}
-        <div className="mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+        <div className="mb-12 sm:mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
           <GalleryImage
             src="/images/30VPO/BUILDING-AXO-PS.png"
             alt="Project axonometric view"
@@ -110,7 +110,7 @@ export default function ProjectPage() {
 
        {/* Content in 3 columns with better spacing */}
 <div className="px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-20 items-start">
 
     {/* Column 1 */}
     <div className="flex flex-col gap-20">
@@ -206,7 +206,7 @@ export default function ProjectPage() {
       />    
 
       <GalleryImage
-        src="/images/30VPO/50M2_TYPO.png"
+        src="/images/30VPO/50M2_TYPO_0.png"
         alt="50M2 TYPO"
         width={700}
         height={600}
@@ -287,7 +287,7 @@ export default function ProjectPage() {
       </div>
 
       <GalleryImage
-        src="/images/30VPO/70M2_TYPO.png"
+        src="/images/30VPO/70M2_TYPO_0.png"
         alt="70M2 TYPO"
         width={700}
         height={500}
@@ -366,7 +366,7 @@ export default function ProjectPage() {
 
   <div className="mt-4 space-y-1">
     <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-      Union Tale
+      Union Tile
     </h3>
   </div>
 

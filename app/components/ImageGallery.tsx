@@ -192,7 +192,7 @@ export function GalleryImage({
           {/* Close button */}
           <button
             onClick={closeGallery}
-            className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors z-60"
+            className="absolute top-2 sm:top-4 right-2 sm:right-4 text-white text-xl sm:text-2xl hover:text-gray-300 transition-colors z-60 p-2"
           >
             ✕
           </button>
@@ -203,7 +203,7 @@ export function GalleryImage({
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl sm:text-3xl hover:text-gray-300 transition-colors z-60 p-2 sm:p-0"
           >
             ‹
           </button>
@@ -214,7 +214,7 @@ export function GalleryImage({
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl sm:text-3xl hover:text-gray-300 transition-colors z-60 p-2 sm:p-0"
           >
             ›
           </button>
@@ -235,7 +235,7 @@ export function GalleryImage({
           </div>
 
           {/* Image counter */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs sm:text-sm bg-black bg-opacity-50 px-2 sm:px-3 py-1 rounded">
             {currentImageIndex + 1} / {galleryImages.length}
           </div>
         </div>
