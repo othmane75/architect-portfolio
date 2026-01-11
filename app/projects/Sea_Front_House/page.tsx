@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { NavBar } from "../../components/NavBar";
+import { GalleryImage } from "../../components/ImageGallery";
 import { getDictionary } from "../../i18n";
 
 const translations = {
@@ -10,7 +11,7 @@ const translations = {
     title: "SEA FRONT HOUSE",
     subtitle: "Inhabiting nature through prefabrication",
     description1:
-      "The Seafront Towers are a response to a living and working space based on the concept of industrialization on a plot of 160 m x 20 m. The proposal is placed in Santa Cruz de Tenerife's coastline. The clients are an agronomist and an architect with a child. The proposal first solves the plot through a 1x1 grid of parallels that permit the creation of the garden on different levels with different typologies of vegetation. From there, the house and office flourish into the garden. The Seafront Towers solves the visibility to the ocean through the different levels and the spaces that are generated.",
+      "The Seafront Towers are a response to a living and working space based on the concept of industrialization on a plot of 160m x 20m. The proposal is placed in Santa Cruz de Tenerife's coastline. The clients are an agronomist and an architect with a child. The proposal first solves the plot through a 1x1 grid of parallels that permit the creation of the garden on different levels with different typologies of vegetation. From there, the house and office flourish into the garden. The Seafront Towers solves the visibility to the ocean through the different levels and the spaces that are generated.",
     description2: "As per the industrialised nature of the project, the interior layout follows a modular and clear system. The different areas are divided through a sequence of 4x4 modules, with different levels of intimacy depending on the floor and placement in the plot without compromising the views to the garden or the sea. The house is composed of three different levels with the circulation on the north and south façade. The play of the stair cases is a guide through the house going from the common areas to the most private ones. Due to the sunny condition of Santa Cruz de Tenerife, an extensive solar protection protects the south façades. To keep the industrialized feel of the project, the shadings are perforated steel panels, movable on the balconies and fixed on the stairs.",
     description3: "The constructive system is based on HEB pillars and beams that connects through an intermediate piece with plates on the end of the structural pieces. The whole is bolted together, and to ensure greater stability each module is tensed with cables on the vertical and horizontal planes. The structure permits for a very open and clear interior distribution. The slabs are mixed concrete with a CLT finish, the enclosure is either glass or opaque panels made of steel and insulation.",
   },
@@ -54,6 +55,30 @@ export default function ProjectPage() {
     }
   };
 
+  // Gallery images array - ordered left to right, top to bottom
+  const galleryImages = [
+    { src: "/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png", alt: "House and office collage" },
+    { src: "/images/sea_front_house/p_DESPATCHO_OFFICINA_1.png", alt: "Office plan" },
+    { src: "/images/sea_front_house/REJILLA_JARDIN_1.png", alt: "Garden grid" },
+    { src: "/images/sea_front_house/PLANOCONTEXTUAL_1.png", alt: "Contextual plan" },
+    { src: "/images/sea_front_house/STRUCTURE.png", alt: "Structure" },
+    { src: "/images/sea_front_house/JOINT_1_1.png", alt: "Joint detail 1" },
+    { src: "/images/sea_front_house/p_BAJA_1.png", alt: "Ground floor plan" },
+    { src: "/images/sea_front_house/ALZADO_FACHADANORTE_1.png", alt: "North elevation" },
+    { src: "/images/sea_front_house/p_PRIMERA_1.png", alt: "First floor plan" },
+    { src: "/images/sea_front_house/SECCION_TRANSVERSAL_1.png", alt: "Transversal section" },
+    { src: "/images/sea_front_house/JOINT_2_1.png", alt: "Joint detail 2" },
+    { src: "/images/sea_front_house/ALZADO_FACHADASUR_1.png", alt: "South elevation" },
+    { src: "/images/sea_front_house/SECCION_LONGITUDINAL_1.png", alt: "Longitudinal section" },
+    { src: "/images/sea_front_house/p_SECUNDA_1.png", alt: "Second floor plan" },
+    { src: "/images/sea_front_house/STRUCTURE_TOWER.png", alt: "Tower structure" },
+    { src: "/images/sea_front_house/p_TERCERA_1.png", alt: "Third floor plan" },
+    { src: "/images/sea_front_house/STRUCTURE_TOWERSEXPLOTED_1.png", alt: "Exploded structure" },
+    { src: "/images/sea_front_house/image2.jpeg", alt: "Image 2" },
+    { src: "/images/sea_front_house/image3.jpeg", alt: "Image 3" },
+    { src: "/images/sea_front_house/image1.jpeg", alt: "Image 1" },
+  ];
+
   return (
     <div className="bg-[#FAF9F6] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
@@ -70,15 +95,16 @@ export default function ProjectPage() {
         </header>
 
         {/* Main Image */}
-        <div className="mb-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-           <Image
-             src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
-             alt="Project axonometric view"
-             width={1900}
-             height={900}
-             className="w-full h-auto"
-             priority
-            />
+        <div className="mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
+          <GalleryImage
+            src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
+            alt="Project axonometric view"
+            width={1900}
+            height={900}
+            className="w-full h-auto"
+            galleryImages={galleryImages}
+            galleryIndex={0}
+          />
         </div>
 
        {/* Content in 3 columns with better spacing */}
@@ -86,178 +112,216 @@ export default function ProjectPage() {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
 
     {/* Column 1 */}
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-20">
 
       <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description1}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/p_DESPATCHO_OFFICINA_1.png"
-        alt="Geometry schemes"
+        alt="Office plan"
         width={700}
         height={500}
         className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={1}
       />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/STRUCTURE.png"
-        alt="Geometry schemes78"
+        alt="Structure"
         width={700}
         height={500}
         className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={4}
       />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/ALZADO_FACHADANORTE_1.png"
-        alt="Geometry schemes"
+        alt="North elevation"
         width={700}
         height={500}
         className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={7}
       />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/JOINT_2_1.png"
-        alt="Site plan"
+        alt="Joint detail 2"
         width={700}
         height={500}
         className="w-full h-auto"
-       />   
+        galleryImages={galleryImages}
+        galleryIndex={10}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/p_SECUNDA_1.png"
-        alt="Site plan"
+        alt="Second floor plan"
         width={700}
         height={500}
         className="w-full h-auto"
-       />   
+        galleryImages={galleryImages}
+        galleryIndex={13}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/STRUCTURE_TOWERSEXPLOTED_1.png"
-        alt="Site plan"
+        alt="Exploded structure"
         width={700}
         height={500}
         className="w-full h-auto"
-       />  
+        galleryImages={galleryImages}
+        galleryIndex={16}
+      />
 
-       <div className="text-black text-sm leading-relaxed text-justify pt-6">
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description3}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/image1.jpeg"
-        alt="Site plan"
+        alt="Image 1"
         width={700}
         height={500}
         className="w-full h-auto"
-       /> 
+        galleryImages={galleryImages}
+        galleryIndex={19}
+      />
 
     </div>
 
     {/* Column 2 */}
-    <div className="flex flex-col gap-10">
-      <Image
+    <div className="flex flex-col gap-20">
+      <GalleryImage
         src="/images/sea_front_house/REJILLA_JARDIN_1.png"
-        alt="Site plan"
+        alt="Garden grid"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={2}
+      />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/JOINT_1_1.png"
-        alt="Site plan"
+        alt="Joint detail 1"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={5}
+      />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/p_PRIMERA_1.png"
-        alt="Site plan"
+        alt="First floor plan"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={8}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/ALZADO_FACHADASUR_1.png"
-        alt="Site plan"
+        alt="South elevation"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={11}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/STRUCTURE_TOWER.png"
-        alt="Site plan"
+        alt="Tower structure"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={14}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/image2.jpeg"
-        alt="Site plan"
+        alt="Image 2"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={17}
+      />
     </div>
 
     {/* Column 3 */}
-    <div className="flex flex-col gap-10">
-      <Image
+    <div className="flex flex-col gap-20">
+      <GalleryImage
         src="/images/sea_front_house/PLANOCONTEXTUAL_1.png"
-        alt="Typology housing"
+        alt="Contextual plan"
         width={700}
         height={500}
         className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={3}
       />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/p_BAJA_1.png"
-        alt="Site plan"
+        alt="Ground floor plan"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={6}
+      />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/SECCION_TRANSVERSAL_1.png"
-        alt="Site plan"
+        alt="Transversal section"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={9}
+      />
 
       <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description2}
       </div>  
       
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/SECCION_LONGITUDINAL_1.png"
-        alt="Site plan"
+        alt="Longitudinal section"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={12}
+      />
 
-      <Image
+      <GalleryImage
         src="/images/sea_front_house/p_TERCERA_1.png"
-        alt="Site plan"
+        alt="Third floor plan"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={15}
+      />
 
-       <Image
+      <GalleryImage
         src="/images/sea_front_house/image3.jpeg"
-        alt="Site plan"
+        alt="Image 3"
         width={700}
         height={500}
         className="w-full h-auto"
-       />
+        galleryImages={galleryImages}
+        galleryIndex={18}
+      />
     </div>
 
   </div>

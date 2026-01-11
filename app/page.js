@@ -84,10 +84,10 @@ export default function Home() {
   <p className="text-sm uppercase tracking-[0.35em] text-gray-500 mb-4">
     {t.intro.hero}
   </p>
-  <h1 className="text-4xl md:text-6xl font-light leading-tight mb-2 italic text-gray-800">
+  <h1 className="text-2xl md:text-4xl font-light leading-tight mb-2 italic text-gray-800">
     {t.intro.subtitle}
   </h1>
-  <p className="text-xl md:text-2xl font-light text-gray-600 italic">
+  <p className="text-base md:text-lg font-light text-gray-600 italic">
     {t.intro.author}
   </p>
   <div className="flex flex-wrap gap-3 text-sm mt-6">
