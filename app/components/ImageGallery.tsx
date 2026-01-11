@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 interface GalleryImage {
   src: string;
@@ -131,24 +131,24 @@ export function GalleryImage({
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const openGallery = () => {
+  const openGallery = useCallback(() => {
     setCurrentImageIndex(galleryIndex);
     setGalleryOpen(true);
     document.body.style.overflow = 'hidden';
-  };
+  }, [galleryIndex]);
 
-  const closeGallery = () => {
+  const closeGallery = useCallback(() => {
     setGalleryOpen(false);
     document.body.style.overflow = 'unset';
-  };
+  }, []);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-  };
+  }, [galleryImages.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
+  }, [galleryImages.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -170,7 +170,7 @@ export function GalleryImage({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [galleryOpen]);
+  }, [galleryOpen, nextImage, prevImage, closeGallery]);
 
   return (
     <>
@@ -185,7 +185,10 @@ export function GalleryImage({
 
       {/* Gallery Modal */}
       {galleryOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+          onClick={closeGallery}
+        >
           {/* Close button */}
           <button
             onClick={closeGallery}
@@ -196,7 +199,10 @@ export function GalleryImage({
 
           {/* Previous button */}
           <button
-            onClick={prevImage}
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
           >
             ‹
@@ -204,14 +210,20 @@ export function GalleryImage({
 
           {/* Next button */}
           <button
-            onClick={nextImage}
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
           >
             ›
           </button>
 
-          {/* Main image */}
-          <div className="max-w-[90vw] max-h-[90vh] relative">
+          {/* Main image container */}
+          <div 
+            className="relative max-w-[95vw] max-h-[95vh] w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={galleryImages[currentImageIndex].src}
               alt={galleryImages[currentImageIndex].alt}

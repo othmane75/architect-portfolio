@@ -28,11 +28,11 @@ export default function AboutPage() {
         {/* Hero Introduction */}
         <section className="mb-20">
           <div className="border-l-2 border-black pl-8 mb-8">
-            <h1 className="text-5xl md:text-6xl font-light mb-4 tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-light mb-4 tracking-tight italic">
               {t.about.pageTitle}
             </h1>
           </div>
-          <p className="text-xl md:text-2xl leading-relaxed font-light text-gray-800 max-w-4xl text-justify">
+          <p className="text-xl md:text-1xl leading-relaxed font-light text-gray-800 max-w-9xl text-justify">
             {t.about.intro}
           </p>
         </section>
@@ -41,7 +41,7 @@ export default function AboutPage() {
         <section className="mb-20">
           <div className="grid md:grid-cols-12 gap-8 mb-8">
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light sticky top-32">
+              <h2 className="text-3xl font-light sticky top-32 italic">
                 {t.about.philosophyTitle}
               </h2>
             </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
         <section className="mb-20">
           <div className="grid md:grid-cols-12 gap-8">
             <div className="md:col-span-4">
-              <h2 className="text-3xl font-light sticky top-32">
+              <h2 className="text-3xl font-light sticky top-32 italic">
                 {t.about.toolsTitle}
               </h2>
             </div>

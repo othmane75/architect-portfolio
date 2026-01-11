@@ -3,45 +3,41 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { NavBar } from "../../components/NavBar";
+import { GalleryImage } from "../../components/ImageGallery";
 import { getDictionary } from "../../i18n";
 
 const translations = {
   en: {
     title: "30 VPO in Av. Vallcarca and C. Bolivar",
     subtitle: "Inhabiting the city through permeability",
-    description1:
-      "The project is an answer to the public protection rental housing and equipment in Av. Vallcarca & Bolivar in the district of Gracia. The project includes thirty public rental housing units, a co-working area, and a multitude of communal areas integrated into the neighborhood. The play ground area and garden on one of the higher floors as well as the public facilities like multi-use rooms and laundry area are implemented in the building. The ground floor also features a garden that makes the transition between the varying levels from the main avenue to the smaller street.",
+    description1: "The project is an answer to the public protection rental housing and equipment in Av. Vallcarca/C. Bolivar in the district of Gracia. The project includes thirty public rental housing, a co-working area, and a multitude of communal areas to the neighbourhood. The play ground area and garden on one of the higher floors as well as the public facilities like multi-use rooms and laundry area are implemented in the building. The ground floor also features a garden that makes the transition between the varying levels from the main avenue to the smaller street.",
     description2: "Through the development, the study of the shape was fundamental. To form the volume, a system of circles and tangents is created. Two circles never touch and the geometry connects different radius of circles together via a line. In this way, we have a very organic shape yet very systematic as it relies on a clear structure to be drawn. These rules helped during the creation of the different housing units but also in the design of alternative spaces we find in the building.",
-    description3: "There are two types of appartment : 50 m2 and 70 m2. The disposition is very flexible the only rigid element is the core that contains the bathroom and the kitchen. As it is a free floorplan it can adapt to the users and uses. The interac- tion of the different apartement is made through a corridor that connects all the units together. The corridor is also a space in its own it can be transitited and occupied. For this reason, it was important to make it a qualitative space, with vegetation that refresh the space and have a positive impact on people perception.",
-    description4: "The building features five different floor typologies with spaces for the com- munity. In ground floor, the structure of the housing is kept as the walls are structural, but all the units are open and occupy different purposes (bicycle parking, storage, sitting area). Then, the first floor is dedicated to a coworking. On the higher floors, the fifth and sixth are double height on one part of the floor. We can find areas such as a laundry room, and multiuse spaces. Finally, on the three heighest floors the creation of a playgroundand garden break the growing to have a smaller floor on the two higher levels. With highly vegetated area and sitting points, the top of the building is like a view point to the inhabit- ant that can enjoy a viewpoint of the neighborhood.",
-    description5: "The shape of the units heavily conditionned the materiality. For the pilars and structural walls, the use of prefabricated concrete elements was implemented. The concrete walls bring thermal confort through mass and to comply with thermal insulation there is an added insulating material and a plaster finish in the inside. As the slabs are also made in concrete we have a mono-material building. The vegetation in the common spaces are implemented through bur- ried pots in the floor itself. The rectilinear walls are either glass or panels, and to deal with sun protection and privacy a system of timber shutters is intro- duced. The core of the units is a non structural element, therefore the use of plaster and lightweight system is priviliged. For the ground floor, as we have different levels to connect the two streets the delimitation of those walls was made through corten stell that serve as a retention element and a safety measure as each platform is quite high.",
+    description3: "There are two types of appartment : 50 m2 and 70 m2. The disposition is very flexible the only rigid element is the core that contains the bathroom and the kitchen. As it is a free floorplan it can adapt to the users and uses. The interaction of the different apartement is made through a corridor that connects all the units together. The corridor is also a space in its own it can be transitited and occupied. For this reason, it was important to make it a qualitative space, with vegetation that refresh the space and have a positive impact on people perception.",
+    description4: "The building features five different floor typologies with spaces for the community. In ground floor, the structure of the housing is kept as the walls are structural, but all the units are open and occupy different purposes (bicycle parking, storage, sitting area). Then, the first floor is dedicated to a coworking. On the higher floors, the fifth and sixth are double height on one part of the floor. We can find areas such as a laundry room, and multiuse spaces. Finally, on the three heighest floors the creation of a playgroundand garden break the growing to have a smaller floor on the two higher levels. With highly vegetated area and sitting points, the top of the building is like a view point to the inhabit- ant that can enjoy a viewpoint of the neighborhood.",
+    description5: "The shape of the units heavily conditionned the materiality. For the pilars and structural walls, the use of prefabricated concrete elements was implemented. The concrete walls bring thermal confort through mass and to comply with thermal insulation there is an added insulating material and a plaster finish in the inside. As the slabs are also made in concrete we have a mono-material building. The vegetation in the common spaces are implemented through burried pots in the floor itself. The rectilinear walls are either glass or panels, and to deal with sun protection and privacy a system of timber shutters is introduced. The core of the units is a non structural element, therefore the use of plaster and lightweight system is priviliged. For the ground floor, as we have different levels to connect the two streets the delimitation of those walls was made through corten stell that serve as a retention element and a safety measure as each platform is quite high.",
   },
   es: {
     title: "30 VPO en Av. Vallcarca y C. Bolívar",
     subtitle: "Habitar la ciudad a través de la permeabilidad",
-    description1:
-      " El proyecto es una respuesta a la necesidad de viviendas de protección oficial y equipamientos en la avenida Vallcarca y Bolívar, en el distrito de Gracia. El proyecto incluye treinta viviendas de protección oficial, un espacio de coworking y una gran variedad de zonas comunes integradas en el barrio. El edificio cuenta con una zona de juegos y un jardín en una de las plantas superiores, así como con instalaciones públicas como salas multiusos y una zona de lavandería. La planta baja también cuenta con un jardín que sirve de transición entre los diferentes niveles de la avenida principal y la calle más pequeña",
-    description2:" A través del desarrollo, el estudio de la forma fue fundamental. Para formar el volumen, se crea un sistema de círculos y tangentes. Dos círculos nunca se tocan y la geometría conecta diferentes radios de círculos a través de una línea. De esta manera, tenemos una forma muy orgánica pero muy sistemática, ya que se basa en una estructura clara para ser dibujada. Estas reglas ayudaron durante la creación de las diferentes unidades de vivienda, pero también en el diseño de los espacios alternativos que encontramos en el edificio.",
-    description3: "Hay dos tipos de apartamentos: de 50 m² y de 70 m². La distribución es muy flexible, el único elemento rígido es el núcleo que contiene el cuarto de baño y la cocina. Al tratarse de una planta libre, se puede adaptar a los usuarios y a los usos. La interacción entre los diferentes apartamentos se realiza a través de un pasillo que conecta todas las unidades. El pasillo es también un espacio en sí mismo, por el que se puede transitar y que se puede ocupar. Por esta razón, era importante convertirlo en un espacio de calidad, con vegetación que refrescara el espacio y tuviera un impacto positivo en la percepción de las personas.",
-    description4: "El edificio cuenta con cinco tipologías de plantas diferentes con espacios para la comunidad. En la planta baja, se mantiene la estructura de la vivienda, ya que las paredes son estructurales, pero todas las unidades están abiertas y tienen diferentes usos (aparcamiento para bicicletas, trastero, zona de descanso). A continuación, la primera planta está dedicada al coworking. En las plantas superiores, la quinta y la sexta tienen doble altura en una parte de la planta. Podemos encontrar zonas como una lavandería y espacios multiusos. Por último, en las tres plantas más altas, la creación de un parque infantil y un jardín rompe la creencia de que cuanto más alto, mejor, para tener una planta más pequeña en los dos niveles superiores. Con una zona muy vegetada y puntos de descanso, la parte superior del edificio es como un mirador para los habitantes, que pueden disfrutar de una vista panorámica del barrio.",
-    description5:" La forma de las unidades ha condicionado en gran medida la elección de los materiales. Para los pilares y los muros estructurales se han utilizado elementos prefabricados de hormigón. Los muros de hormigón aportan confort térmico gracias a su masa y, para cumplir con las normas de aislamiento térmico, se ha añadido un material aislante y un revestimiento en el interior. Las losas también son de hormigón, por lo que el edificio está construido con un solo material. La vegetación de las zonas comunes se ha colocado en macetas enterradas en el suelo. Las paredes rectilíneas son de cristal o paneles y, para garantizar la protección solar y la intimidad, se ha instalado un sistema de persianas de madera. El núcleo de las unidades es un elemento no estructural, por lo que se ha optado por el uso de yeso y un sistema ligero. En la planta baja, como tenemos diferentes niveles para conectar las dos calles, la delimitación de estas paredes se ha realizado con acero Corten, que sirve como elemento de contención y medida de seguridad, ya que cada plataforma es bastante alta."
+    description1:" El proyecto es una respuesta a la vivienda de protección oficial en alquiler y al equipamiento en Av. Vallcarca/C. Bolívar en el distrito de Gracia. El proyecto incluye treinta viviendas de protección oficial en alquiler, un espacio de coworking y multitud de zonas comunes para el barrio. El área de juegos y el jardín en una de las plantas superiores, así como los equipamientos públicos como salas polivalentes y zona de lavandería, están implementados en el edificio. La planta baja también cuenta con un jardín que realiza la transición entre los diferentes niveles desde la avenida principal hasta la calle más pequeña.",
+    description2:"A través del desarrollo, el estudio de la forma fue fundamental. Para formar el volumen, se crea un sistema de círculos y tangentes. Dos círculos nunca se tocan y la geometría conecta diferentes radios de círculos mediante una línea. De esta manera, tenemos una forma muy orgánica pero muy sistemática, ya que se basa en una estructura clara para ser dibujada. Estas reglas ayudaron durante la creación de las diferentes unidades de vivienda, pero también en el diseño de los espacios alternativos que encontramos en el edificio.",
+    description3: "Hay dos tipos de apartamentos: 50 m² y 70 m². La disposición es muy flexible, el único elemento rígido es el núcleo que contiene el baño y la cocina. Al ser una planta libre, puede adaptarse a los usuarios y a los usos. La interacción de los diferentes apartamentos se realiza a través de un pasillo que conecta todas las unidades entre sí. El pasillo es también un espacio en sí mismo que puede ser transitado y ocupado. Por esta razón, era importante convertirlo en un espacio cualitativo, con vegetación que refresca el espacio y tiene un impacto positivo en la percepción de las personas.",
+    description4: "El edificio cuenta con cinco tipologías de planta diferentes con espacios para la comunidad. En la planta baja, se mantiene la estructura de la vivienda ya que los muros son estructurales, pero todas las unidades están abiertas y ocupan diferentes propósitos (aparcamiento de bicicletas, trastero, zona de estar). A continuación, la primera planta está dedicada a un espacio de coworking. En las plantas superiores, la quinta y sexta son de doble altura en una parte de la planta. Podemos encontrar áreas como una lavandería y espacios polivalentes. Finalmente, en las tres plantas más altas, la creación de un área de juegos y un jardín rompe el crecimiento para tener una planta más pequeña en los dos niveles superiores. Con una zona muy vegetada y puntos de descanso, la cima del edificio es como un mirador para el habitante que puede disfrutar de unas vistas del barrio.",
+    description5:"La forma de las unidades condicionó en gran medida la materialidad. Para los pilares y muros estructurales, se implementó el uso de elementos prefabricados de hormigón. Los muros de hormigón aportan confort térmico a través de la masa y para cumplir con el aislamiento térmico se añade un material aislante y un acabado de yeso en el interior. Al ser las losas también de hormigón, tenemos un edificio monomaterial. La vegetación en los espacios comunes se implementa mediante macetas enterradas en el propio suelo. Los muros rectilíneos son de vidrio o paneles, y para lidiar con la protección solar y la privacidad se introduce un sistema de persianas de madera. El núcleo de las unidades es un elemento no estructural, por lo que se privilegia el uso de yeso y sistemas ligeros. Para la planta baja, al tener diferentes niveles para conectar las dos calles, la delimitación de esos muros se realizó mediante acero corten que sirve como elemento de retención y medida de seguridad ya que cada plataforma es bastante alta."
   },
   fr: {
     title: "30 VPO à Av. Vallcarca et C. Bolívar",
     subtitle: "Habiter la ville à travers la perméabilité",
-    description1:
-      "Le projet répond aux besoins en matière de logements sociaux et d'équipements publics dans les avenues Vallcarca et Bolivar, dans le quartier de Gracia. Il comprend trente logements sociaux, un espace de coworking et de nombreux espaces communs intégrés au quartier. Une aire de jeux et un jardin situés à l'un des étages supérieurs, ainsi que des équipements publics tels que des salles polyvalentes et une buanderie, ont été aménagés dans le bâtiment. Le rez-de-chaussée comprend également un jardin qui assure la transition entre les différents niveaux, de l'avenue principale à la petite rue.",
-    description2:"Grâce à ce développement, l'étude de la forme a été fondamentale. Pour former le volume, un système de cercles et de tangentes est créé. Deux cercles ne se touchent jamais et la géométrie relie différents rayons de cercles par une ligne. De cette façon, nous obtenons une forme très organique mais aussi très systématique, car elle repose sur une structure claire pour être dessinée. Ces règles ont aidé lors de la création des différentes unités de logement, mais aussi dans la conception des espaces alternatifs que l'on trouve dans le bâtiment.",
-    description3:"Il existe deux types d'appartements : 50 m² et 70 m². La disposition est très flexible, le seul élément rigide étant le noyau qui contient la salle de bains et la cuisine. Comme il s'agit d'un plan d'étage libre, il peut s'adapter aux utilisateurs et aux utilisations. L'interaction entre les différents appartements se fait par un couloir qui relie toutes les unités entre elles. Le couloir est également un espace à part entière qui peut être traversé et occupé. C'est pourquoi il était important d'en faire un espace de qualité, avec de la végétation qui rafraîchit l'espace et a un impact positif sur la perception des gens.",
-    description4: "Le bâtiment comprend cinq types d'étages différents avec des espaces destinés à la communauté. Au rez-de-chaussée, la structure du logement est conservée, car les murs sont porteurs, mais tous les logements sont ouverts et ont des fonctions différentes (parking à vélos, débarras, coin salon). Le premier étage est dédié au coworking. Aux étages supérieurs, les cinquième et sixième étages ont une double hauteur sur une partie de l'étage. On y trouve des espaces tels qu'une buanderie et des espaces polyvalents. Enfin, aux trois étages supérieurs, la création d'une aire de jeux et d'un jardin rompt la croissance pour obtenir un étage plus petit aux deux niveaux supérieurs. Avec une zone très végétalisée et des points de repos, le sommet du bâtiment est comme un point de vue pour les habitants qui peuvent profiter d'une vue sur le quartier.",
-    description5: " La forme des unités a fortement conditionné le choix des matériaux. Pour les piliers et les murs structurels, des éléments préfabriqués en béton ont été utilisés. Les murs en béton apportent un confort thermique grâce à leur masse et, pour respecter les normes d'isolation thermique, un matériau isolant et un enduit ont été ajoutés à l'intérieur. Les dalles étant également en béton, le bâtiment est constitué d'un seul matériau. La végétation dans les espaces communs est mise en place à l'aide de pots enterrés dans le sol. Les murs rectilignes sont en verre ou en panneaux, et pour assurer la protection solaire et l'intimité, un système de volets en bois a été mis en place. Le cœur des unités est un élément non structurel, c'est pourquoi l'utilisation de plâtre et d'un système léger a été privilégiée. Au rez-de-chaussée, comme nous avons différents niveaux pour relier les deux rues, la délimitation de ces murs a été réalisée à l'aide d'acier Corten qui sert d'élément de retenue et de mesure de sécurité, car chaque plate-forme est assez haute."
+    description1: "Le projet est une réponse au logement locatif à protection publique et à l'équipement d'Av. Vallcarca/C. Bolívar dans le district de Gracia. Le projet comprend trente logements locatifs à protection publique, un espace de coworking et une multitude d'espaces communs pour le quartier. L'aire de jeux et le jardin situés à l'un des étages supérieurs, ainsi que les équipements publics tels que les salles polyvalentes et la zone de blanchisserie, sont intégrés dans le bâtiment. Le rez-de-chaussée comprend également un jardin qui assure la transition entre les différents niveaux de l'avenue principale à la rue plus petite.",
+    description2:"Grâce au développement, l'étude de la forme a été fondamentale. Pour former le volume, un système de cercles et de tangentes est créé. Deux cercles ne se touchent jamais et la géométrie relie différents rayons de cercles par une ligne. De cette façon, nous avons une forme très organique mais très systématique, car elle repose sur une structure claire pour être dessinée. Ces règles ont aidé lors de la création des différentes unités de logement, mais aussi dans la conception des espaces alternatifs que l'on trouve dans le bâtiment.",
+    description3:"Il existe deux types d'appartements : 50 m² et 70 m². La disposition est très flexible, le seul élément rigide est le noyau qui contient la salle de bain et la cuisine. En tant que plan libre, il peut s'adapter aux utilisateurs et aux usages. L'interaction des différents appartements se fait par un couloir qui relie toutes les unités entre elles. Le couloir est aussi un espace en soi qui peut être transité et occupé. Pour cette raison, il était important d'en faire un espace qualitatif, avec de la végétation qui rafraîchit l'espace et a un impact positif sur la perception des personnes.",
+    description4: "Le bâtiment comprend cinq typologies d'étages différentes avec des espaces pour la communauté. Au rez-de-chaussée, la structure du logement est conservée car les murs sont structurels, mais toutes les unités sont ouvertes et occupent différentes fonctions (parking à vélos, stockage, coin salon). Ensuite, le premier étage est dédié à un espace de coworking. Aux étages supérieurs, le cinquième et le sixième sont à double hauteur sur une partie de l'étage. On y trouve des espaces tels qu'une buanderie et des espaces polyvalents. Enfin, aux trois étages les plus élevés, la création d'une aire de jeux et d'un jardin rompt la croissance pour avoir un étage plus petit aux deux niveaux supérieurs. Avec une zone très végétalisée et des points de repos, le sommet du bâtiment est comme un point de vue pour l'habitant qui peut profiter d'une vue sur le quartier.",
+    description5: "La forme des unités a fortement conditionné la matérialité. Pour les piliers et les murs porteurs, l'utilisation d'éléments en béton préfabriqué a été mise en œuvre. Les murs en béton apportent un confort thermique grâce à la masse et, pour respecter l'isolation thermique, un matériau isolant et une finition en plâtre sont ajoutés à l'intérieur. Comme les dalles sont également en béton, nous avons un bâtiment monomatériau. La végétation dans les espaces communs est mise en œuvre par des pots enterrés dans le sol lui-même. Les murs rectilignes sont en verre ou en panneaux, et pour faire face à la protection solaire et à la vie privée, un système de volets en bois est introduit. Le noyau des unités n'est pas un élément structurel, c'est pourquoi l'utilisation de plâtre et de systèmes légers est privilégiée. Pour le rez-de-chaussée, comme nous avons différents niveaux pour connecter les deux rues, la délimitation de ces murs a été réalisée en acier corten qui sert d'élément de retenue et de mesure de sécurité car chaque plateforme est assez haute."
   },
 };
 
 export default function ProjectPage() {
   const [lang, setLang] = useState<"en" | "es" | "fr">("en");
-  const [galleryOpen, setGalleryOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -62,68 +58,27 @@ export default function ProjectPage() {
     }
   };
 
-  // Gallery images array
+  // Gallery images array - ordered left to right, top to bottom
   const galleryImages = [
     { src: "/images/30VPO/BUILDING-AXO-PS.png", alt: "Building axonometric" },
     { src: "/images/30VPO/SITE PLAN PRJ.png", alt: "Site plan" },
-    { src: "/images/30VPO/SQUEMES_GEOMETRY.png", alt: "Geometry schemes" },
-    { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology" },
-    { src: "/images/30VPO/SECTION Point de fuite .png", alt: "Section point de fuite" },
-    { src: "/images/30VPO/AXO SECTION DETAIL TYPO.png", alt: "Axonometric section detail" },
     { src: "/images/30VPO/collage.png", alt: "Project collage" },
+    { src: "/images/30VPO/F0.png", alt: "Floor 0" },
+    { src: "/images/30VPO/SQUEMES_GEOMETRY.png", alt: "Geometry schemes" },
     { src: "/images/30VPO/elevation bolivar.png", alt: "Bolivar elevation" },
+    { src: "/images/30VPO/AXO CONSTRUCTIF GENERAL PS .png", alt: "General constructive axonometric" },
+    { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology" },
     { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology 2" },
+    { src: "/images/30VPO/section bolivar to vallcarca.png", alt: "Bolivar to Vallcarca section" },
+    { src: "/images/30VPO/SECTION Point de fuite .png", alt: "Section point de fuite" },
     { src: "/images/30VPO/50M2_TYPO.png", alt: "50m2 typology" },
+    { src: "/images/30VPO/70M2_TYPO.png", alt: "70m2 typology" },
+    { src: "/images/30VPO/AXO SECTION DETAIL TYPO.png", alt: "Axonometric section detail" },
     { src: "/images/30VPO/F6.png", alt: "Floor 6" },
+    { src: "/images/30VPO/F9.png", alt: "Floor 9" },
     { src: "/images/30VPO/section transversal.png", alt: "Transversal section" },
     { src: "/images/30VPO/F11.png", alt: "Floor 11" },
-    { src: "/images/30VPO/F0.png", alt: "Floor 0" },
-    { src: "/images/30VPO/AXO CONSTRUCTIF GENERAL PS .png", alt: "General constructive axonometric" },
-    { src: "/images/30VPO/section bolivar to vallcarca.png", alt: "Bolivar to Vallcarca section" },
-    { src: "/images/30VPO/70M2_TYPO.png", alt: "70m2 typology" },
-    { src: "/images/30VPO/F9.png", alt: "Floor 9" },
   ];
-
-  const openGallery = (index: number) => {
-    setCurrentImageIndex(index);
-    setGalleryOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeGallery = () => {
-    setGalleryOpen(false);
-    document.body.style.overflow = 'unset';
-  };
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!galleryOpen) return;
-      
-      switch (e.key) {
-        case 'ArrowRight':
-          nextImage();
-          break;
-        case 'ArrowLeft':
-          prevImage();
-          break;
-        case 'Escape':
-          closeGallery();
-          break;
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [galleryOpen]);
 
   return (
     <div className="bg-[#FAF9F6] text-black min-h-screen">
@@ -142,14 +97,14 @@ export default function ProjectPage() {
 
         {/* Main Image */}
         <div className="mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
-          <Image
+          <GalleryImage
             src="/images/30VPO/BUILDING-AXO-PS.png"
             alt="Project axonometric view"
             width={1900}
             height={900}
-            className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-            priority
-            onClick={() => openGallery(0)}
+            className="w-full h-auto"
+            galleryImages={galleryImages}
+            galleryIndex={0}
           />
         </div>
 
@@ -158,180 +113,197 @@ export default function ProjectPage() {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-start">
 
     {/* Column 1 */}
-    <div className="flex flex-col gap-10">
-      <Image
+    <div className="flex flex-col gap-20">
+      <GalleryImage
         src="/images/30VPO/SITE PLAN PRJ.png"
         alt="Site plan"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(1)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={1}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/SQUEMES_GEOMETRY.png"
         alt="Geometry schemes"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(2)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={4}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description2}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/TYPOHOUSING.png"
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(3)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={7}
       />  
 
-     <Image
+     <GalleryImage
         src="/images/30VPO/SECTION Point de fuite .png"
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(4)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={10}
       />   
 
       <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description4}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/AXO SECTION DETAIL TYPO.png"
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(5)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={13}
       /> 
     </div>
 
     {/* Column 2 */}
-    <div className="flex flex-col gap-10">
-      <Image
+    <div className="flex flex-col gap-20">
+      <GalleryImage
         src="/images/30VPO/collage.png"
         alt="Collage"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(6)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={2}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/elevation bolivar.png"
         alt="Elevation Bolivar"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(7)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={5}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/TYPOHOUSING.png"
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(8)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={8}
       />    
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/50M2_TYPO.png"
         alt="50M2 TYPO"
         width={700}
         height={600}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(9)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={11}
       />   
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/F6.png"
         alt="TWO HOUSING OF 70m2 AND COMMUNAL SPACE WITH DOUBLE HEIGHT"
         width={700}
         height={600}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(10)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={14}
       /> 
 
-     <Image
+     <GalleryImage
         src="/images/30VPO/section transversal.png"
         alt="TWO HOUSING OF 70m2 AND COMMUNAL SPACE WITH DOUBLE HEIGHT"
         width={700}
         height={600}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(11)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={16}
       /> 
 
-     <Image
+     <GalleryImage
         src="/images/30VPO/F11.png"
         alt="Point de fuite"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(12)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={17}
       /> 
     </div>
 
     {/* Column 3 */}
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-20">
       <div className="text-black text-sm leading-relaxed text-justify pt-6">
         {translations[lang].description1}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/F0.png"
         alt="Typology housing"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(13)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={3}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/AXO CONSTRUCTIF GENERAL PS .png"
         alt="AXO CONSTRUCTIF GENERAL"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(14)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={6}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/section bolivar to vallcarca.png"
         alt="AXO CONSTRUCTIF GENERAL"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(15)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={9}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
         {translations[lang].description3}
       </div>
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/70M2_TYPO.png"
         alt="70M2 TYPO"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(16)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={12}
       />
 
-      <Image
+      <GalleryImage
         src="/images/30VPO/F9.png"
         alt="70M2 TYPO"
         width={700}
         height={500}
-        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-        onClick={() => openGallery(17)}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={15}
       />
 
       <div className="text-black text-sm leading-relaxed text-justify">
@@ -404,52 +376,6 @@ export default function ProjectPage() {
             </div>
           </div>
         </div>
-
-        {/* Gallery Modal */}
-        {galleryOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
-            {/* Close button */}
-            <button
-              onClick={closeGallery}
-              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors z-60"
-            >
-              ✕
-            </button>
-
-            {/* Previous button */}
-            <button
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
-            >
-              ‹
-            </button>
-
-            {/* Next button */}
-            <button
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors z-60"
-            >
-              ›
-            </button>
-
-            {/* Main image */}
-            <div className="max-w-[90vw] max-h-[90vh] relative">
-              <Image
-                src={galleryImages[currentImageIndex].src}
-                alt={galleryImages[currentImageIndex].alt}
-                width={1200}
-                height={800}
-                className="max-w-full max-h-full object-contain"
-                priority
-              />
-            </div>
-
-            {/* Image counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded">
-              {currentImageIndex + 1} / {galleryImages.length}
-            </div>
-          </div>
-        )}
 
       </main>
     </div>
