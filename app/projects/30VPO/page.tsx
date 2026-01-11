@@ -332,7 +332,7 @@ export default function ProjectPage() {
 >
   <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
     <Image
-      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
+      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE_1.png"
       alt="Sea Front House"
       fill
       className="object-cover transition-transform duration-500 group-hover:scale-105"
