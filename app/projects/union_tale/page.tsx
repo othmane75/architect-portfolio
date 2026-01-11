@@ -332,7 +332,7 @@ export default function ProjectPage() {
       fill
       className="object-cover transition-transform duration-500 group-hover:scale-105"
       priority
-    />
+     />
   </div>
 
   <div className="mt-4 space-y-1">
