@@ -24,35 +24,35 @@ export default function AboutPage() {
     <div className="bg-[#FAF9F6] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
       
-      <div className="pt-32 pb-20 max-w-5xl mx-auto px-6">
+      <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 max-w-5xl mx-auto px-4 sm:px-6">
         {/* Hero Introduction */}
-        <section className="mb-20">
-          <div className="border-l-2 border-black pl-8 mb-8">
-            <h1 className="text-5xl md:text-6xl font-light mb-4 tracking-tight italic">
+        <section className="mb-12 sm:mb-20">
+          <div className="border-l-2 border-black pl-4 sm:pl-8 mb-6 sm:mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-3 sm:mb-4 tracking-tight italic">
               {t.about.pageTitle}
             </h1>
           </div>
-          <p className="text-xl md:text-1xl leading-relaxed font-light text-gray-800 max-w-9xl text-justify">
+          <p className="text-lg sm:text-xl md:text-1xl leading-relaxed font-light text-gray-800 max-w-9xl text-justify">
             {t.about.intro}
           </p>
         </section>
 
         {/* Architectural Philosophy */}
-        <section className="mb-20">
-          <div className="grid md:grid-cols-12 gap-8 mb-8">
-            <div className="md:col-span-4">
-              <h2 className="text-3xl font-light sticky top-32 italic">
+        <section className="mb-12 sm:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="lg:col-span-4">
+              <h2 className="text-2xl sm:text-3xl font-light sticky top-24 sm:top-32 italic">
                 {t.about.philosophyTitle}
               </h2>
             </div>
-            <div className="md:col-span-8 space-y-6">
-              <p className="text-lg leading-relaxed text-gray-800 text-justify">
+            <div className="lg:col-span-8 space-y-4 sm:space-y-6">
+              <p className="text-base sm:text-lg leading-relaxed text-gray-800 text-justify">
                 {t.about.philosophy1}
               </p>
-              <p className="text-lg leading-relaxed text-gray-800 text-justify">
+              <p className="text-base sm:text-lg leading-relaxed text-gray-800 text-justify">
                 {t.about.philosophy2}
               </p>
-              <p className="text-lg leading-relaxed text-gray-800 text-justify">
+              <p className="text-base sm:text-lg leading-relaxed text-gray-800 text-justify">
                 {t.about.philosophy3}
               </p>
             </div>
@@ -60,43 +60,43 @@ export default function AboutPage() {
         </section>
 
         {/* Tools & Skills */}
-        <section className="mb-20">
-          <div className="grid md:grid-cols-12 gap-8">
-            <div className="md:col-span-4">
-              <h2 className="text-3xl font-light sticky top-32 italic">
+        <section className="mb-12 sm:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+            <div className="lg:col-span-4">
+              <h2 className="text-2xl sm:text-3xl font-light sticky top-24 sm:top-32 italic">
                 {t.about.toolsTitle}
               </h2>
             </div>
-            <div className="md:col-span-8">
-              <p className="text-lg leading-relaxed text-gray-800 mb-8 text-justify">
+            <div className="lg:col-span-8">
+              <p className="text-base sm:text-lg leading-relaxed text-gray-800 mb-6 sm:mb-8 text-justify">
                 {t.about.toolsIntro}
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div className="bg-white/40 p-4 rounded-sm border border-gray-300">
-                  <div className="font-medium mb-1">AutoCAD</div>
-                  <div className="text-sm text-gray-600">{t.about.autocad}</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div className="bg-white/40 p-3 sm:p-4 rounded-sm border border-gray-300">
+                  <div className="font-medium mb-1 text-sm sm:text-base">AutoCAD</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t.about.autocad}</div>
                 </div>
-                <div className="bg-white/40 p-4 rounded-sm border border-gray-300">
-                  <div className="font-medium mb-1">Adobe Photoshop</div>
-                  <div className="text-sm text-gray-600">{t.about.photoshop}</div>
+                <div className="bg-white/40 p-3 sm:p-4 rounded-sm border border-gray-300">
+                  <div className="font-medium mb-1 text-sm sm:text-base">Adobe Photoshop</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t.about.photoshop}</div>
                 </div>
-                <div className="bg-white/40 p-4 rounded-sm border border-gray-300">
-                  <div className="font-medium mb-1">Adobe InDesign</div>
-                  <div className="text-sm text-gray-600">{t.about.indesign}</div>
+                <div className="bg-white/40 p-3 sm:p-4 rounded-sm border border-gray-300">
+                  <div className="font-medium mb-1 text-sm sm:text-base">Adobe InDesign</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t.about.indesign}</div>
                 </div>
-                <div className="bg-white/40 p-4 rounded-sm border border-gray-300">
-                  <div className="font-medium mb-1">Revit</div>
-                  <div className="text-sm text-gray-600">{t.about.revit}</div>
+                <div className="bg-white/40 p-3 sm:p-4 rounded-sm border border-gray-300">
+                  <div className="font-medium mb-1 text-sm sm:text-base">Revit</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t.about.revit}</div>
                 </div>
-                <div className="bg-white/40 p-4 rounded-sm border border-gray-300">
-                  <div className="font-medium mb-1">D5 Render</div>
-                  <div className="text-sm text-gray-600">{t.about.d5render}</div>
+                <div className="bg-white/40 p-3 sm:p-4 rounded-sm border border-gray-300">
+                  <div className="font-medium mb-1 text-sm sm:text-base">D5 Render</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{t.about.d5render}</div>
                 </div>
               </div>
 
-              <div className="bg-black/5 p-6 rounded-sm border-l-2 border-black">
-                <p className="text-lg leading-relaxed text-gray-800 text-justify">
+              <div className="bg-black/5 p-4 sm:p-6 rounded-sm border-l-2 border-black">
+                <p className="text-base sm:text-lg leading-relaxed text-gray-800 text-justify">
                   {t.about.personalProject}
                 </p>
               </div>
