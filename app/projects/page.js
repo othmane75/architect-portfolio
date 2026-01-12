@@ -9,9 +9,14 @@ export default function ProjectsPage() {
   const t = getDictionary(lang);
 
   useEffect(() => {
-    const stored = typeof window !== 'undefined' ? localStorage.getItem('lang') : null;
+  try {
+    const stored = localStorage.getItem('lang');
     if (stored) setLang(stored);
-  }, []);
+  } catch (e) {
+    // Android WebView safe fallback
+  }
+}, []);
+
 
   const changeLang = (lng) => {
     setLang(lng);
