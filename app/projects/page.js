@@ -9,19 +9,23 @@ export default function ProjectsPage() {
   const t = getDictionary(lang);
 
   useEffect(() => {
-  try {
-    const stored = localStorage.getItem('lang');
-    if (stored) setLang(stored);
-  } catch (e) {
-    // Android WebView safe fallback
-  }
-}, []);
-
+    if (typeof window === 'undefined') return;
+    try {
+      const stored = localStorage.getItem('lang');
+      if (stored) setLang(stored);
+    } catch (e) {
+      // Android WebView safe fallback
+    }
+  }, []);
 
   const changeLang = (lng) => {
     setLang(lng);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('lang', lng);
+      try {
+        localStorage.setItem('lang', lng);
+      } catch (e) {
+        // Fallback: do nothing
+      }
     }
   };
 

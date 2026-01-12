@@ -41,9 +41,13 @@ export default function ProjectPage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "en" || stored === "es" || stored === "fr") {
-      setLang(stored);
+    try {
+      const stored = window.localStorage.getItem("lang");
+      if (stored === "en" || stored === "es" || stored === "fr") {
+        setLang(stored);
+      }
+    } catch (e) {
+      // Fallback: do nothing, default to "en"
     }
   }, []);
 
@@ -53,7 +57,11 @@ export default function ProjectPage() {
     if (lng === "en" || lng === "es" || lng === "fr") {
       setLang(lng);
       if (typeof window !== "undefined") {
-        window.localStorage.setItem("lang", lng);
+        try {
+          window.localStorage.setItem("lang", lng);
+        } catch (e) {
+          // Fallback: do nothing
+        }
       }
     }
   };

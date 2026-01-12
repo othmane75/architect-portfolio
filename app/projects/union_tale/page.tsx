@@ -47,8 +47,6 @@ export default function ProjectPage() {
       // Fallback: do nothing, default to "en"
     }
   }, []);
-        // Fallback: do nothing, default to "en"
-      }
 
   const t = getDictionary(lang);
 
