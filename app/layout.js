@@ -17,6 +17,9 @@ export const metadata = {
   keywords: "architecture, portfolio, Barcelona, La Salle URL, architectural design, Iness Clar",
   authors: [{ name: "Iness Clar" }],
   themeColor: "#FAF9F6",
+  verification: {
+    google: "kC5Fj4I2wyhXLNdDZApLg9cmCp5MYGEXgxLH8hpK__o",
+  },
   openGraph: {
     title: "Iness Clar - Architecture Portfolio",
     description: "Thoughtful, human-first architecture portfolio showcasing innovative design projects.",
