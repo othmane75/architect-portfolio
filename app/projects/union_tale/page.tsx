@@ -38,16 +38,15 @@ export default function ProjectPage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (stored === "en" || stored === "es" || stored === "fr") {
-      setLang(stored);
+    try {
+      const stored = window.localStorage.getItem("lang");
+      if (stored === "en" || stored === "es" || stored === "fr") {
+        setLang(stored);
+      }
+    } catch (e) {
+      // Fallback: do nothing, default to "en"
     }
   }, []);
-      try {
-        const stored = window.localStorage.getItem("lang");
-        if (stored === "en" || stored === "es" || stored === "fr") {
-          setLang(stored);
-        }
-      } catch (e) {
         // Fallback: do nothing, default to "en"
       }
 
