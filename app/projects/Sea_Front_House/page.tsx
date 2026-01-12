@@ -64,12 +64,12 @@ export default function ProjectPage() {
     { src: "/images/sea_front_house/STRUCTURE.png", alt: "Structure" },
     { src: "/images/sea_front_house/JOINT_1_1.png", alt: "Joint detail 1" },
     { src: "/images/sea_front_house/p_BAJA_1.png", alt: "Ground floor plan" },
-    { src: "/images/sea_front_house/ALZADO_FACHADANORTE_1.png", alt: "North elevation" },
-    { src: "/images/sea_front_house/p_PRIMERA_1.png", alt: "First floor plan" },
+    { src: "/images/sea_front_house/ALZADO_FACHADANORTE_0.png", alt: "North elevation" },
+    { src: "/images/sea_front_house/p_PRIMERA_0.png", alt: "First floor plan" },
     { src: "/images/sea_front_house/SECCION_TRANSVERSAL_1.png", alt: "Transversal section" },
     { src: "/images/sea_front_house/JOINT_2_1.png", alt: "Joint detail 2" },
-    { src: "/images/sea_front_house/ALZADO_FACHADASUR_1.png", alt: "South elevation" },
-    { src: "/images/sea_front_house/SECCION_LONGITUDINAL_1.png", alt: "Longitudinal section" },
+    { src: "/images/sea_front_house/ALZADO_FACHADASUR2_0.png", alt: "South elevation" },
+    { src: "/images/sea_front_house/SECCION_LONGITUDINAL_0.png", alt: "Longitudinal section" },
     { src: "/images/sea_front_house/p_SECUNDA_1.png", alt: "Second floor plan" },
     { src: "/images/sea_front_house/STRUCTURE_TOWER.png", alt: "Tower structure" },
     { src: "/images/sea_front_house/p_TERCERA_1.png", alt: "Third floor plan" },
@@ -217,7 +217,7 @@ export default function ProjectPage() {
       />
 
       <GalleryImage
-        src="/images/sea_front_house/p_PRIMERA_1.png"
+        src="/images/sea_front_house/p_PRIMERA_0.png"
         alt="First floor plan"
         width={700}
         height={500}

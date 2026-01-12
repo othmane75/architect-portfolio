@@ -68,11 +68,11 @@ export default function ProjectPage() {
     { src: "/images/30VPO/elevation bolivar.png", alt: "Bolivar elevation" },
     { src: "/images/30VPO/AXO CONSTRUCTIF GENERAL PS .png", alt: "General constructive axonometric" },
     { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology" },
-    { src: "/images/30VPO/TYPOHOUSING.png", alt: "Housing typology 2" },
+    { src: "/images/30VPO/F1.png", alt: "Housing typology 2" },
     { src: "/images/30VPO/section bolivar to vallcarca.png", alt: "Bolivar to Vallcarca section" },
     { src: "/images/30VPO/SECTION Point de fuite .png", alt: "Section point de fuite" },
-    { src: "/images/30VPO/50M2_TYPO.png", alt: "50m2 typology" },
-    { src: "/images/30VPO/70M2_TYPO.png", alt: "70m2 typology" },
+    { src: "/images/30VPO/50M2_TYPO_0.png", alt: "50m2 typology" },
+    { src: "/images/30VPO/70M2_TYPO_0.png", alt: "70m2 typology" },
     { src: "/images/30VPO/AXO SECTION DETAIL TYPO.png", alt: "Axonometric section detail" },
     { src: "/images/30VPO/F6.png", alt: "Floor 6" },
     { src: "/images/30VPO/F9.png", alt: "Floor 9" },
@@ -139,7 +139,7 @@ export default function ProjectPage() {
       </div>
 
       <GalleryImage
-        src="/images/30VPO/TYPOHOUSING.png"
+        src="/images/30VPO/F1.png"
         alt="FOUR HOUSING PER FLOOR"
         width={700}
         height={500}
@@ -332,7 +332,7 @@ export default function ProjectPage() {
 >
   <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
     <Image
-      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png"
+      src="/images/sea_front_house/COLLAGE_HOUSEANDOFFICE_1.png"
       alt="Sea Front House"
       fill
       className="object-cover transition-transform duration-500 group-hover:scale-105"
