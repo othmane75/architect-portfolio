@@ -65,7 +65,7 @@ export default function ProjectPage() {
 
   // Gallery images array - ordered left to right, top to bottom
   const galleryImages = [
-    { src: "/images/sea_front_house/COLLAGE_HOUSEANDOFFICE.png", alt: "House and office collage" },
+    { src: "/images/sea_front_house/COLLAGE_HOUSEANDOFFICE_1.png", alt: "House and office collage" },
     { src: "/images/sea_front_house/p_DESPATCHO_OFFICINA-01.png", alt: "Office plan" },
     { src: "/images/sea_front_house/REJILLA_JARDIN_1.png", alt: "Garden grid" },
     { src: "/images/sea_front_house/PLANOCONTEXTUAL_1.png", alt: "Contextual plan" },
