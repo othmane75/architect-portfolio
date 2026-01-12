@@ -3,4 +3,4 @@ Allow: /
 Disallow: /.next/
 Disallow: /api/
 
-Sitemap: https://clararchitecture.com/sitemap.xml
+Sitemap: https://clarchitecture.vercel.app/sitemap.xml
