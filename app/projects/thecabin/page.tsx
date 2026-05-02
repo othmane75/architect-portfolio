@@ -9,27 +9,18 @@ import { getDictionary } from "../../i18n";
 const translations = {
   en: {
     title: "The Cabin",
-    subtitle: "A Case Study 21 Extension",
-    description1: "This project inscribes itself in the third semester of the Architectural Design unit. The aim of the exercise is to create an extension of Pierre Koenig’s Bailey house answering the need of an at home office for the psychologist Walter Bailey and his wife Mary Bailey. The placement of the addition is key to respect the original house and create a coherent and cohesive design.",
-    description2: "The strategy for the extension was the addition of a floor. Using the same principles as the original house, only adding a light stair case on the west facade to guide the patients to the office without disturbing the privacy of the house. The position of the extension on the higher floor permits the necessary amount of privacy and proximity. The office does not touch directly the roof but rather floating on top of it. As an addition, we have a unique tile cover that creates the union between original house and addition.",
-    description3: "The extension is Walter Bailey’s office and consultation room. The layout keeps the balance of openness from the original house without compromising the privacy of the patients. The strategy used to allow for the modularity are the sliding door, that allow for a more or less divided distribution. The placement of the openings and the role of light is also key to recreate the sensation of openness and connection to the exterior found in Koenig’s work.",
-    description4: "The facades are composed of prefabricated steel panels and the ceramic cover is also prefabricated. It works hanging on a steel structure that acts as a frame with U-shaped hooks that allow us to hang the panels. The tile cover is laying over the roof with metal pieces that allow a space between the two elements."
+    subtitle: "Creating a climatic shelter and community",
+    description1: "The aim of this proposal is to design and build a small shelter that is struc- turally clear, environmentally aware, and practical for real use beyond the course. Instead of being only a conceptual project, it focuses on creating a realistic and inhabitable space that values comfort, efficiency, and simple construction. The project proposes a compact wooden shelter based on a clear and logical structural system.",
 },
   es: {
     title: "The Cabin",
-    subtitle: "A Case Study 21 Extension",
-    description1: "Este proyecto se inscribe en el tercer semestre de la asignatura de Diseño Arquitectónico. El objetivo del ejercicio es crear una ampliación de la casa Bailey de Pierre Koenig que responda a la necesidad de una oficina en casa para el psicólogo Walter Bailey y su esposa Mary Bailey. La ubicación de la ampliación es clave para respetar la casa original y crear un diseño coherente y cohesivo.",
-    description2: "La estrategia para la ampliación fue la adición de una planta. Utilizando los mismos principios que la casa original, solo se añadió una ligera escalera en la fachada oeste para guiar a los pacientes hacia la oficina sin perturbar la privacidad de la casa. La posición de la ampliación en la planta superior permite la cantidad necesaria de privacidad y proximidad. La oficina no toca directamente el tejado, sino que flota sobre él. Como añadido, tenemos una cubierta de tejas única que crea la unión entre la casa original y la ampliación.",
-    description3: "La ampliación es la oficina y sala de consultas de Walter Bailey. La distribución mantiene el equilibrio de apertura de la casa original sin comprometer la privacidad de los pacientes. La estrategia utilizada para permitir la modularidad son las puertas correderas, que permiten una distribución más o menos dividida. La ubicación de las aberturas y el papel de la luz también son clave para recrear la sensación de apertura y conexión con el exterior que se encuentra en la obra de Koenig.",
-    description4: "Las fachadas están compuestas por paneles de acero prefabricados y la cubierta cerámica también es prefabricada. Funciona colgando de una estructura de acero que actúa como un marco con ganchos en forma de U que permiten colgar los paneles. La cubierta de azulejos se apoya sobre el techo con piezas metálicas que permiten un espacio entre los dos elementos."
+    subtitle: "Crear un refugio acogedor y una comunidad",
+    description1: "El objetivo de esta propuesta es diseñar y construir un pequeño refugio que sea estructuralmente sencillo, respetuoso con el medio ambiente y práctico para su uso real más allá del curso. En lugar de limitarse a ser un proyecto conceptual, se centra en crear un espacio realista y habitable que prima la comodidad, la eficiencia y la sencillez constructiva. El proyecto propone un refugio compacto de madera basado en un sistema estructural claro y lógico.",
 },
   fr: {
     title: "The Cabin",
-    subtitle: "A Case Study 21 Extension",
-    description1: "Ce projet s'inscrit dans le troisième semestre de l'unité de conception architecturale. Le but de l'exercice est de créer une extension de la maison Bailey de Pierre Koenig répondant au besoin d'un bureau à domicile pour le psychologue Walter Bailey et sa femme Mary Bailey. L'emplacement de l'addition est essentiel pour respecter la maison originale et créer un design cohérent et cohésif.",
-    description2:"La stratégie pour l'extension a été l'ajout d'un étage. En utilisant les mêmes principes que la maison originale, en n'ajoutant qu'un léger escalier sur la façade ouest pour guider les patients vers le bureau sans perturber l'intimité de la maison. La position de l'extension à l'étage supérieur permet la quantité nécessaire d'intimité et de proximité. Le bureau ne touche pas directement le toit, mais flotte plutôt au-dessus. En tant qu'ajout, nous avons une couverture de tuiles unique qui crée l'union entre la maison originale et l'addition.",
-    description3: "L'extension est le bureau et la salle de consultation de Walter Bailey. La disposition maintient l'équilibre de l'ouverture de la maison originale sans compromettre l'intimité des patients. La stratégie utilisée pour permettre la modularité sont les portes coulissantes, qui permettent une distribution plus ou moins divisée. Le placement des ouvertures et le rôle de la lumière sont également essentiels pour recréer la sensation d'ouverture et de connexion avec l'extérieur que l'on trouve dans le travail de Koenig.",
-    description4: "Les façades sont composées de panneaux préfabriqués en acier et le revêtement en céramique est également préfabriqué. Il est suspendu à une structure en acier qui sert de cadre, avec des crochets en forme de U qui permettent d'accrocher les panneaux. Le revêtement en tuiles est posé sur le toit à l'aide de pièces métalliques qui laissent un espace entre les deux éléments."
+    subtitle: "Créer un refuge climatique et une communauté",
+    description1: "L'objectif de cette proposition est de concevoir et de construire un petit abri doté d'une structure claire, respectueux de l'environnement et adapté à une utilisation concrète au-delà du cadre du cours. Loin d'être un simple projet conceptuel, il vise à créer un espace réaliste et habitable qui privilégie le confort, l'efficacité et la simplicité de construction. Le projet propose un abri compact en bois reposant sur un système structurel clair et logique.",
 },
 };
 
@@ -67,15 +58,17 @@ export default function ProjectPage() {
   const galleryImages = [
     { src: "/images/thecabin/48B630DA-AFD2-4FC9-AEA1-EB3481E63913 2.jpg", alt: "Project axonometric view" },
     { src: "/images/thecabin/IMG_0767.jpeg", alt: "Site plan" },
-    { src: "/images/thecabin/CLIMATIC_SECTION_copy.png", alt: "Southeast axonometric" },
-    { src: "/images/thecabin/IMG_0666.jpeg", alt: "South elevation" },
-    { src: "/images/thecabin/STEPBYSTEP1.png", alt: "Northeast axonometric" },
     { src: "/images/thecabin/axo.png", alt: "First floor plan" },
+    { src: "/images/thecabin/PHOTO-2026-01-15-13-38-40.jpg", alt: "Detail view" },
+    { src: "/images/thecabin/CLIMATIC_SECTION_copy.png", alt: "Southeast axonometric" },
     { src: "/images/thecabin/IMG_0322.jpeg", alt: "Small model" },
+    { src: "/images/thecabin/elevation north.png", alt: "North elevation" },
+    { src: "/images/thecabin/IMG_0666.jpeg", alt: "South elevation" },
     { src: "/images/thecabin/elevation south.png", alt: "East elevation" },
+    { src: "/images/thecabin/f49296d2-90f4-40f8-9b0b-2f40e4334246.JPG", alt: "North elevation" },
+    { src: "/images/thecabin/STEPBYSTEP1.png", alt: "Northeast axonometric" },
     { src: "/images/thecabin/CLIMATIC_SECTION.png", alt: "Transversal section" },
     { src: "/images/thecabin/dd7d0143-6e33-477e-8819-241bc2bb5c35.JPG", alt: "Second floor plan" },
-    { src: "/images/thecabin/f49296d2-90f4-40f8-9b0b-2f40e4334246.JPG", alt: "North elevation" },
   ];
 
   return (
@@ -123,37 +116,37 @@ export default function ProjectPage() {
         height={500}
         className="w-full h-auto"
         galleryImages={galleryImages}
-        galleryIndex={4}
+        galleryIndex={1}
       /> 
 
       <GalleryImage
         src="/images/thecabin/CLIMATIC_SECTION_copy.png"
-        alt="Site plan"
+        alt="Southeast axonometric"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={4}
+      />
+
+      <GalleryImage
+        src="/images/thecabin/IMG_0666.jpeg"
+        alt="South elevation"
         width={700}
         height={500}
         className="w-full h-auto"
         galleryImages={galleryImages}
         galleryIndex={7}
-      />
-
-      <GalleryImage
-        src="/images/thecabin/IMG_0666.jpeg"
-        alt="Site plan"
-        width={200}
-        height={100}
-        className="w-full h-auto mx-auto"
-        galleryImages={galleryImages}
-        galleryIndex={10}
       /> 
 
       <GalleryImage
         src="/images/thecabin/STEPBYSTEP1.png"
-        alt="Site plan"
-        width={300}
-        height={200}
+        alt="Northeast axonometric"
+        width={700}
+        height={500}
         className="w-full h-auto"
         galleryImages={galleryImages}
-        galleryIndex={13}
+        galleryIndex={10}
       />
     </div>
 
@@ -161,7 +154,7 @@ export default function ProjectPage() {
     <div className="flex flex-col gap-20">
       <GalleryImage
         src="/images/thecabin/axo.png"
-        alt="Collage"
+        alt="First floor plan"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -171,7 +164,7 @@ export default function ProjectPage() {
 
        <GalleryImage
         src="/images/thecabin/IMG_0322.jpeg"
-        alt="Collage"
+        alt="Small model"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -181,7 +174,7 @@ export default function ProjectPage() {
 
      <GalleryImage
         src="/images/thecabin/elevation south.png"
-        alt="Collage"
+        alt="East elevation"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -191,7 +184,7 @@ export default function ProjectPage() {
 
       <GalleryImage
         src="/images/thecabin/CLIMATIC_SECTION.png"
-        alt="Collage"
+        alt="Transversal section"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -201,12 +194,12 @@ export default function ProjectPage() {
 
       <GalleryImage
         src="/images/thecabin/dd7d0143-6e33-477e-8819-241bc2bb5c35.JPG"
-        alt="Site plan"
-        width={300}
-        height={200}
+        alt="Second floor plan"
+        width={700}
+        height={500}
         className="w-full h-auto"
         galleryImages={galleryImages}
-        galleryIndex={14}
+        galleryIndex={12}
       /> 
 
     </div>
@@ -215,7 +208,7 @@ export default function ProjectPage() {
     <div className="flex flex-col gap-20">
       <GalleryImage
         src="/images/thecabin/PHOTO-2026-01-15-13-38-40.jpg"
-        alt="Collage"
+        alt="Detail view"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -225,7 +218,7 @@ export default function ProjectPage() {
 
      <GalleryImage
         src="/images/thecabin/elevation north.png"
-        alt="Collage"
+        alt="North elevation"
         width={700}
         height={500}
         className="w-full h-auto"
@@ -235,7 +228,7 @@ export default function ProjectPage() {
 
       <GalleryImage
         src="/images/thecabin/f49296d2-90f4-40f8-9b0b-2f40e4334246.JPG"
-        alt="Collage"
+        alt="North elevation"
         width={700}
         height={500}
         className="w-full h-auto"

@@ -107,10 +107,10 @@ export default function Home() {
 </header>
 
         {/* Interactive Image with Clickable Areas */}
-        <div className="w-2/3 py-12 relative mx-auto">
+        <div className=" py-12 relative mx-auto">
           <div className="relative w-full">
             <Image
-              src="/images/mainpage/PAGEDEGARDE_text.png"
+              src="/images/mainpage/page_de_garde0.png"
               alt="Projects overview"
               width={1400}
               height={800}
@@ -118,46 +118,80 @@ export default function Home() {
             />
             
             {/* Clickable Areas */}
-            {/* Project 1 */}
+            {/* Project 1: Union Tale */}
             <Link 
               href="/projects/union_tale"
               className="absolute group cursor-pointer transition-all duration-300"
               style={{
-                left: '45%',
-                top: '4%',
-                width: '70%',
-                height: '10%',
+                left: '7%',
+                top: '5%',
+                width: '80%',
+                height: '14%'
+                
               }}
+              title="Union Tale"
             >
-              <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300 border-2 border-transparent group-hover:border-black/20"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-15 bg-white transition-opacity duration-300 rounded"></div>
             </Link>
 
-            {/* Project 2 */}
+            {/* Project 2: Sea Front House */}
             <Link 
               href="/projects/Sea_Front_House"
               className="absolute group cursor-pointer transition-all duration-300"
               style={{
-                left: '0%',
-                top: '35%',
-                width: '100%',
-                height: '10%',
+                left: '14%',
+                top: '25%',
+                width: '75%',
+                height: '9%',
               }}
+              title="Sea Front House"
             >
-              <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300 border-2 border-transparent group-hover:border-black/20"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-15 bg-white transition-opacity duration-300"></div>
             </Link>
 
-            {/* Project 3 */}
+            {/* Project 3: 30VPO */}
             <Link 
               href="/projects/30VPO"
               className="absolute group cursor-pointer transition-all duration-300"
               style={{
-                left: '41%',
-                top: '69%',
-                width: '52%',
-                height: '26%',
+                left: '16%',
+                top: '38%',
+                width: '69%',
+                height: '15%',
               }}
+              title="30 VPO"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-0 border-2 border-transparent group-hover:border/20"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-15 bg-white transition-opacity duration-300 rounded"></div>
+            </Link>
+
+            {/* Project 4: CONTINUUM */}
+            <Link 
+              href="/projects/CONTINUUM"
+              className="absolute group cursor-pointer transition-all duration-300"
+              style={{
+                left: '18%',
+                top: '57%',
+                width: '75%',
+                height: '19%',
+              }}
+              title="CONTINUUM"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-15 bg-white transition-opacity duration-300"></div>
+            </Link>
+
+            {/* Project 5: The Cabin */}
+            <Link 
+              href="/projects/thecabin"
+              className="absolute group cursor-pointer transition-all duration-300"
+              style={{
+                left: '17%',
+                top: '81%',
+                width: '75%',
+                height: '15%',
+              }}
+              title="The Cabin"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-15 bg-white transition-opacity duration-300"></div>
             </Link>
           </div>
         </div>
