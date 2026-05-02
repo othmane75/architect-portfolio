@@ -380,6 +380,52 @@ export default function ProjectPage() {
 
   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
 </a>
+{/* Project 3 */}
+              <a 
+               href="/projects/CONTINUUM" 
+               className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/CONTINUUM/axo_full_building_base.png"
+      alt="CONTINUUM"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      CONTINUUM
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
+{/* Project 4 */}
+<a 
+  href="/projects/thecabin" 
+  className="group relative overflow-hidden"
+>
+  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Image
+      src="/images/thecabin/48B630DA-AFD2-4FC9-AEA1-EB3481E63913 2.jpg"
+      alt="The Cabin"
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+      priority
+    />
+  </div>
+
+  <div className="mt-4 space-y-1">
+    <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
+      The Cabin
+    </h3>
+  </div>
+
+  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+</a>
 
             </div>
           </div>

@@ -8,23 +8,23 @@ import { getDictionary } from "../../i18n";
 
 const translations = {
   en: {
-    title: "UNION TILE",
-    subtitle: "A Case Study 21 Extension",
+    title: "CONTINUUM",
+    subtitle: "When buildings become public space",
     description1: "This project inscribes itself in the third semester of the Architectural Design unit. The aim of the exercise is to create an extension of Pierre Koenig’s Bailey house answering the need of an at home office for the psychologist Walter Bailey and his wife Mary Bailey. The placement of the addition is key to respect the original house and create a coherent and cohesive design.",
     description2: "The strategy for the extension was the addition of a floor. Using the same principles as the original house, only adding a light stair case on the west facade to guide the patients to the office without disturbing the privacy of the house. The position of the extension on the higher floor permits the necessary amount of privacy and proximity. The office does not touch directly the roof but rather floating on top of it. As an addition, we have a unique tile cover that creates the union between original house and addition.",
     description3: "The extension is Walter Bailey’s office and consultation room. The layout keeps the balance of openness from the original house without compromising the privacy of the patients. The strategy used to allow for the modularity are the sliding door, that allow for a more or less divided distribution. The placement of the openings and the role of light is also key to recreate the sensation of openness and connection to the exterior found in Koenig’s work.",
     description4: "The facades are composed of prefabricated steel panels and the ceramic cover is also prefabricated. It works hanging on a steel structure that acts as a frame with U-shaped hooks that allow us to hang the panels. The tile cover is laying over the roof with metal pieces that allow a space between the two elements."
 },
   es: {
-    title: "UNION TILE",
-    subtitle: "A Case Study 21 Extension",
+    title: "CONTINUUM",
+    subtitle: "Cuando los edificios se convierten en espacio público",
     description1: "Este proyecto se inscribe en el tercer semestre de la asignatura de Diseño Arquitectónico. El objetivo del ejercicio es crear una ampliación de la casa Bailey de Pierre Koenig que responda a la necesidad de una oficina en casa para el psicólogo Walter Bailey y su esposa Mary Bailey. La ubicación de la ampliación es clave para respetar la casa original y crear un diseño coherente y cohesivo.",
     description2: "La estrategia para la ampliación fue la adición de una planta. Utilizando los mismos principios que la casa original, solo se añadió una ligera escalera en la fachada oeste para guiar a los pacientes hacia la oficina sin perturbar la privacidad de la casa. La posición de la ampliación en la planta superior permite la cantidad necesaria de privacidad y proximidad. La oficina no toca directamente el tejado, sino que flota sobre él. Como añadido, tenemos una cubierta de tejas única que crea la unión entre la casa original y la ampliación.",
     description3: "La ampliación es la oficina y sala de consultas de Walter Bailey. La distribución mantiene el equilibrio de apertura de la casa original sin comprometer la privacidad de los pacientes. La estrategia utilizada para permitir la modularidad son las puertas correderas, que permiten una distribución más o menos dividida. La ubicación de las aberturas y el papel de la luz también son clave para recrear la sensación de apertura y conexión con el exterior que se encuentra en la obra de Koenig.",
     description4: "Las fachadas están compuestas por paneles de acero prefabricados y la cubierta cerámica también es prefabricada. Funciona colgando de una estructura de acero que actúa como un marco con ganchos en forma de U que permiten colgar los paneles. La cubierta de azulejos se apoya sobre el techo con piezas metálicas que permiten un espacio entre los dos elementos."
 },
   fr: {
-    title: "UNION TILE",
+    title: "CONTINUUM",
     subtitle: "A Case Study 21 Extension",
     description1: "Ce projet s'inscrit dans le troisième semestre de l'unité de conception architecturale. Le but de l'exercice est de créer une extension de la maison Bailey de Pierre Koenig répondant au besoin d'un bureau à domicile pour le psychologue Walter Bailey et sa femme Mary Bailey. L'emplacement de l'addition est essentiel pour respecter la maison originale et créer un design cohérent et cohésif.",
     description2:"La stratégie pour l'extension a été l'ajout d'un étage. En utilisant les mêmes principes que la maison originale, en n'ajoutant qu'un léger escalier sur la façade ouest pour guider les patients vers le bureau sans perturber l'intimité de la maison. La position de l'extension à l'étage supérieur permet la quantité nécessaire d'intimité et de proximité. Le bureau ne touche pas directement le toit, mais flotte plutôt au-dessus. En tant qu'ajout, nous avons une couverture de tuiles unique qui crée l'union entre la maison originale et l'addition.",
@@ -65,22 +65,17 @@ export default function ProjectPage() {
 
   // Gallery images array - ordered left to right, top to bottom
   const galleryImages = [
-    { src: "/images/union_tale/COLLAGE AXO.png", alt: "Project axonometric view" },
-    { src: "/images/union_tale/SITEPLAN_CASESTUDY21.png", alt: "Site plan" },
-    { src: "/images/union_tale/AXO_CASESTUDY21_SOUTHEAST.png", alt: "Southeast axonometric" },
-    { src: "/images/union_tale/ELEVATION_CASESTUDY21_SOUTH_100.png", alt: "South elevation" },
-    { src: "/images/union_tale/AXO_CASESTUDY21_NORTHEAST.png", alt: "Northeast axonometric" },
-    { src: "/images/union_tale/FP_CASESTUDY21_1F_100.png", alt: "First floor plan" },
-    { src: "/images/union_tale/IMG_PETITMAQUETTE_1.png", alt: "Small model" },
-    { src: "/images/union_tale/ELEVATION_CASESTUDY21_EAST_100.png", alt: "East elevation" },
-    { src: "/images/union_tale/SECTION_CASESTUDY21_TRANSVERSAL_100.png", alt: "Transversal section" },
-    { src: "/images/union_tale/FP_CASESTUDY21_2F_100.png", alt: "Second floor plan" },
-    { src: "/images/union_tale/DRAWING_Ceramic_Tiles.png", alt: "Ceramic tiles drawing" },
-    { src: "/images/union_tale/FP_CASESTUDY21_EXTENSION_50.png", alt: "Extension floor plan" },
-    { src: "/images/union_tale/DRAWING_prefab_Steel_Panels.png", alt: "Steel panels drawing" },
-    { src: "/images/union_tale/IMG_GRANDEMAQUETTE_2.png", alt: "Large model" },
-    { src: "/images/union_tale/SECTION_CASESTUDY21_LONGITUDINAL_100.png", alt: "Longitudinal section" },
-    { src: "/images/union_tale/IMG_GRANDEMAQUETTE_1.png", alt: "Large model 1" },
+    { src: "/images/CONTINUUM/axo_full building base.png", alt: "Project axonometric view" },
+    { src: "/images/CONTINUUM/SITE_HANDDRAWING_OF_SITE.png", alt: "Site plan" },
+    { src: "/images/thecabin/CLIMATIC_SECTION_copy.png", alt: "Southeast axonometric" },
+    { src: "/images/thecabin/IMG_0666.jpeg", alt: "South elevation" },
+    { src: "/images/thecabin/STEPBYSTEP1.png", alt: "Northeast axonometric" },
+    { src: "/images/thecabin/axo.png", alt: "First floor plan" },
+    { src: "/images/thecabin/IMG_0322.jpeg", alt: "Small model" },
+    { src: "/images/thecabin/elevation south.png", alt: "East elevation" },
+    { src: "/images/thecabin/CLIMATIC_SECTION.png", alt: "Transversal section" },
+    { src: "/images/thecabin/dd7d0143-6e33-477e-8819-241bc2bb5c35.JPG", alt: "Second floor plan" },
+    { src: "/images/thecabin/f49296d2-90f4-40f8-9b0b-2f40e4334246.JPG", alt: "North elevation" },
   ];
 
   return (
@@ -101,7 +96,7 @@ export default function ProjectPage() {
         {/* Main Image */}
         <div className="mb-12 sm:mb-20 px-4 sm:px-8 lg:px-12 max-w-[1600px] mx-auto">
           <GalleryImage
-            src="/images/union_tale/COLLAGE AXO.png"
+            src="/images/CONTINUUM/axo_full_building_base.png"
             alt="Project axonometric view"
             width={1900}
             height={900}
@@ -117,18 +112,12 @@ export default function ProjectPage() {
 
     {/* Column 1 */}
     <div className="flex flex-col gap-20">
-      <GalleryImage
-        src="/images/union_tale/SITEPLAN_CASESTUDY21.png"
-        alt="Site plan"
-        width={700}
-        height={500}
-        className="w-full h-auto"
-        galleryImages={galleryImages}
-        galleryIndex={1}
-      />
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description1}
+      </div>
 
       <GalleryImage
-        src="/images/union_tale/AXO_CASESTUDY21_NORTHEAST.png"
+        src="/images/CONTINUUM/SITe_HANDDRAWING_OF_SITE.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -137,12 +126,12 @@ export default function ProjectPage() {
         galleryIndex={4}
       /> 
 
-      <div className="text-black text-sm leading-relaxed text-justify">
-        {translations[lang].description2}
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description1}
       </div>
 
       <GalleryImage
-        src="/images/union_tale/ELEVATION_CASESTUDY21_EAST_100.png"
+        src="/images/CONTINUUM/PLANTAS_PRIMERA.png"
         alt="Site plan"
         width={700}
         height={500}
@@ -152,21 +141,31 @@ export default function ProjectPage() {
       />
 
       <GalleryImage
-        src="/images/union_tale/DRAWING_Ceramic_Tiles.png"
+        src="/images/CONTINUUM/ALZADO_SURESTE.png"
         alt="Site plan"
         width={200}
         height={100}
-        className="w-2/3 h-auto mx-auto"
+        className="w-full h-auto mx-auto"
         galleryImages={galleryImages}
         galleryIndex={10}
       /> 
 
-      <div className="text-black text-sm leading-relaxed text-justify">
-        {translations[lang].description4}
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description1}
       </div>
 
       <GalleryImage
-        src="/images/union_tale/IMG_GRANDEMAQUETTE_2.png"
+        src="/images/CONTINUUM/CORTE_TRANSVERSAL.png"
+        alt="Site plan"
+        width={300}
+        height={200}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={13}
+      />
+
+      <GalleryImage
+        src="/images/CONTINUUM/AXO_FACADE_EXPLOADED.png"
         alt="Site plan"
         width={300}
         height={200}
@@ -179,7 +178,7 @@ export default function ProjectPage() {
     {/* Column 2 */}
     <div className="flex flex-col gap-20">
       <GalleryImage
-        src="/images/union_tale/AXO_CASESTUDY21_SOUTHEAST.png"
+        src="/images/CONTINUUM/DIAGRAM_CONCEPT_IDEA.png"
         alt="Collage"
         width={700}
         height={500}
@@ -189,7 +188,7 @@ export default function ProjectPage() {
       />
 
        <GalleryImage
-        src="/images/union_tale/FP_CASESTUDY21_1F_100.png"
+        src="/images/CONTINUUM/DIAGRAM_FLOORPLAN_FLEXIBILITY.png"
         alt="Collage"
         width={700}
         height={500}
@@ -199,7 +198,7 @@ export default function ProjectPage() {
       />
 
      <GalleryImage
-        src="/images/union_tale/SECTION_CASESTUDY21_TRANSVERSAL_100.png"
+        src="/images/CONTINUUM/PLANTAS_BAJA.png"
         alt="Collage"
         width={700}
         height={500}
@@ -209,7 +208,7 @@ export default function ProjectPage() {
       />
 
       <GalleryImage
-        src="/images/union_tale/FP_CASESTUDY21_EXTENSION_50.png"
+        src="/images/CONTINUUM/DIAGRAM_PROGRAM.png"
         alt="Collage"
         width={700}
         height={500}
@@ -219,7 +218,7 @@ export default function ProjectPage() {
       />
 
       <GalleryImage
-        src="/images/union_tale/SECTION_CASESTUDY21_LONGITUDINAL_100.png"
+        src="/images/CONTINUUM/PLANTAS_CUBIERTA.png"
         alt="Site plan"
         width={300}
         height={200}
@@ -229,24 +228,31 @@ export default function ProjectPage() {
       /> 
 
       <GalleryImage
-        src="/images/union_tale/IMG_GRANDEMAQUETTE_1.png"
+        src="/images/CONTINUUM/ALZADO_NORTEOESTE.png"
         alt="Site plan"
         width={300}
         height={200}
         className="w-full h-auto"
         galleryImages={galleryImages}
-        galleryIndex={15}
-      />
+        galleryIndex={14}
+      /> 
+
+      <GalleryImage
+        src="/images/CONTINUUM/AXO_STRUCTURE_EXPLOADED.png"
+        alt="Site plan"
+        width={300}
+        height={200}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={14}
+      /> 
+
     </div>
 
     {/* Column 3 */}
     <div className="flex flex-col gap-20">
-      <div className="text-black text-sm leading-relaxed text-justify pt-6">
-        {translations[lang].description1}
-      </div>
-
       <GalleryImage
-        src="/images/union_tale/ELEVATION_CASESTUDY21_SOUTH_100.png"
+        src="/images/CONTINUUM/DIAGRAM_TERRACEENERGY.png"
         alt="Collage"
         width={700}
         height={500}
@@ -255,8 +261,22 @@ export default function ProjectPage() {
         galleryIndex={3}
       />
 
+      <GalleryImage
+        src="/images/CONTINUUM/PLANTAS_SOTANO0.png"
+        alt="Collage"
+        width={700}
+        height={500}
+        className="w-full h-auto"
+        galleryImages={galleryImages}
+        galleryIndex={3}
+      />
+
+      <div className="text-black text-sm leading-relaxed text-justify pt-6">
+        {translations[lang].description1}
+      </div>
+
      <GalleryImage
-        src="/images/union_tale/IMG_PETITMAQUETTE_1.png"
+        src="/images/CONTINUUM/axo_insidebasecollage.png"
         alt="Collage"
         width={700}
         height={500}
@@ -266,7 +286,7 @@ export default function ProjectPage() {
       />
 
       <GalleryImage
-        src="/images/union_tale/FP_CASESTUDY21_2F_100.png"
+        src="/images/CONTINUUM/CORTE_LONGITUDINAL.png"
         alt="Collage"
         width={700}
         height={500}
@@ -275,19 +295,18 @@ export default function ProjectPage() {
         galleryIndex={9}
       />
 
-     <div className="text-black text-sm leading-relaxed text-justify">
-        {translations[lang].description3}
-      </div>
-
       <GalleryImage
-        src="/images/union_tale/DRAWING_prefab_Steel_Panels.png"
+        src="/images/CONTINUUM/AXO_FLOORSDIAGRAM.png"
         alt="Collage"
-        width={300}
-        height={200}
-        className="w-2/3 h-auto mx-auto"
+        width={700}
+        height={500}
+        className="w-full h-auto"
         galleryImages={galleryImages}
-        galleryIndex={12}
+        galleryIndex={9}
       />
+      
+
+     
     </div>
 
   </div>
@@ -329,14 +348,14 @@ export default function ProjectPage() {
 </a>
 
 {/* Project 1 */}
-<a 
-  href="/projects/thecabin" 
-  className="group relative overflow-hidden"
->
+    <a 
+        href="/projects/union_tale" 
+        className="group relative overflow-hidden"
+    >
   <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
     <Image
-      src="/images/thecabin/48B630DA-AFD2-4FC9-AEA1-EB3481E63913 2.jpg"
-      alt="The Cabin"
+      src="/images/union_tale/COLLAGE AXO.png"
+      alt="Union Tale"
       fill
       className="object-cover transition-transform duration-500 group-hover:scale-105"
       priority
@@ -345,7 +364,7 @@ export default function ProjectPage() {
 
   <div className="mt-4 space-y-1">
     <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-      The Cabin
+      Union Tile
     </h3>
   </div>
 
@@ -376,15 +395,15 @@ export default function ProjectPage() {
   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
 </a>
 
-{/* Project 4 */}
-              <a 
-               href="/projects/CONTINUUM" 
-               className="group relative overflow-hidden"
+{/* Project 1 */}
+<a 
+  href="/projects/thecabin" 
+  className="group relative overflow-hidden"
 >
   <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
     <Image
-      src="/images/CONTINUUM/axo_full_building_base.png"
-      alt="CONTINUUM"
+      src="/images/thecabin/48B630DA-AFD2-4FC9-AEA1-EB3481E63913 2.jpg"
+      alt="The Cabin"
       fill
       className="object-cover transition-transform duration-500 group-hover:scale-105"
       priority
@@ -393,7 +412,7 @@ export default function ProjectPage() {
 
   <div className="mt-4 space-y-1">
     <h3 className="text-lg font-light tracking-wide group-hover:translate-x-1 transition-transform duration-300">
-      CONTINUUM
+      The Cabin
     </h3>
   </div>
 
