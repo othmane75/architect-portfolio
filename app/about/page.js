@@ -123,20 +123,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* About Me Image */}
-        <section className="mb-12 sm:mb-20 flex justify-center">
-          <div className="relative w-56 sm:w-72 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
-            <Image
-              src="/images/mainpage/aboutmepic.jpeg"
-              alt="Iness Clar"
-              width={320}
-              height={500}
-              className="w-full h-auto"
-              priority
-            />
-          </div>
-        </section>
-
         {/* Social Links */}
         <section className="border-t-2 border-black pt-12 mt-20">
           <div className="flex justify-center gap-8">
