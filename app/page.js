@@ -93,12 +93,10 @@ export default function Home() {
   <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-gray-500 mb-3 sm:mb-4">
     {t.intro.hero}
   </p>
-  <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-tight mb-2 italic text-gray-800">
+  <h1 className="text-base text-justify sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-tight mb-2 italic text-gray-800">
     {t.intro.subtitle}
   </h1>
-  <p className="text-base md:text-lg font-light text-gray-600 italic">
-    {t.intro.author}
-  </p>
+
   <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
     <a href="/about" className="px-4 sm:px-5 py-2 sm:py-3 border border-gray-300 rounded-full hover:border-black transition text-sm">
       {t.intro.ctaAbout}
