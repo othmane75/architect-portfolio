@@ -69,7 +69,7 @@ export default function ProjectPage() {
   // Gallery images array - ordered left to right, top to bottom
   const galleryImages = [
     { src: "/images/CONTINUUM/axo_full_building_base.png", alt: "Project axonometric view" },
-    { src: "/images/CONTINUUM/SITE_HANDDRAWING_OF_SITE.png", alt: "Site plan" },
+    { src: "/images/CONTINUUM/SITE_HANDDRAWING_OF_SITE0.png", alt: "Site plan" },
     { src: "/images/CONTINUUM/DIAGRAM_CONCEPT_IDEA.png", alt: "Concept diagram" },
     { src: "/images/CONTINUUM/DIAGRAM_TERRACEENERGY.png", alt: "Terrace energy diagram" },
     { src: "/images/CONTINUUM/PLANTAS_PRIMERA.png", alt: "First floor plan" },
@@ -127,7 +127,7 @@ export default function ProjectPage() {
       </div>
 
       <GalleryImage
-        src="/images/CONTINUUM/SITE_HANDDRAWING_OF_SITE.png"
+        src="/images/CONTINUUM/SITE_HANDDRAWING_OF_SITE0.png"
         alt="Site plan"
         width={700}
         height={500}
