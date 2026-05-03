@@ -24,17 +24,35 @@ export default function AboutPage() {
     <div className="bg-[#FAF9F6] text-black min-h-screen">
       <NavBar t={t} lang={lang} onLangChange={changeLang} visible />
       
-      <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Hero Introduction */}
+      <div className="pt-24 sm:pt-32 pb-12 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Hero Introduction with Image */}
         <section className="mb-12 sm:mb-20">
-          <div className="border-l-2 border-black pl-4 sm:pl-8 mb-6 sm:mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-3 sm:mb-4 tracking-tight italic">
-              {t.about.pageTitle}
-            </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10">
+            {/* Image on the left */}
+            <div className="lg:col-span-4 flex justify-center lg:justify-start">
+              <div className="relative w-56 sm:w-64 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
+                <Image
+                  src="/images/mainpage/aboutmepic.jpeg"
+                  alt="Iness Clar"
+                  width={320}
+                  height={500}
+                  className="w-full h-auto"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Text on the right */}
+            <div className="lg:col-span-8">
+              <div className="border-l-2 border-black pl-4 sm:pl-8 mb-6 sm:mb-8">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-3 sm:mb-4 tracking-tight italic">
+                  {t.about.pageTitle}
+                </h1>
+              </div>
+              <p className="text-lg sm:text-xl md:text-1xl leading-relaxed font-light text-gray-800 text-justify">
+                {t.about.intro}
+              </p>
+            </div>
           </div>
-          <p className="text-lg sm:text-xl md:text-1xl leading-relaxed font-light text-gray-800 max-w-9xl text-justify">
-            {t.about.intro}
-          </p>
         </section>
 
         {/* Architectural Philosophy */}
@@ -101,6 +119,20 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* About Me Image */}
+        <section className="mb-12 sm:mb-20 flex justify-center">
+          <div className="relative w-56 sm:w-72 overflow-hidden rounded-lg bg-gray-100 shadow-sm">
+            <Image
+              src="/images/mainpage/aboutmepic.jpeg"
+              alt="Iness Clar"
+              width={320}
+              height={500}
+              className="w-full h-auto"
+              priority
+            />
           </div>
         </section>
 
