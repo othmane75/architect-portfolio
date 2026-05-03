@@ -10,7 +10,7 @@ const translations = {
   en: {
     title: "The Cabin",
     subtitle: "Creating a climatic shelter and community",
-    description1: "The aim of this proposal is to design and build a small shelter that is struc- turally clear, environmentally aware, and practical for real use beyond the course. Instead of being only a conceptual project, it focuses on creating a realistic and inhabitable space that values comfort, efficiency, and simple construction. The project proposes a compact wooden shelter based on a clear and logical structural system.",
+    description1: "The aim of this proposal is to design and build a small shelter that is structurally clear, environmentally aware, and practical for real use beyond the course. Instead of being only a conceptual project, it focuses on creating a realistic and inhabitable space that values comfort, efficiency, and simple construction. The project proposes a compact wooden shelter based on a clear and logical structural system.",
 },
   es: {
     title: "The Cabin",

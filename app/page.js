@@ -90,10 +90,10 @@ export default function Home() {
         }`}
       >
        <header className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-  <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-gray-500 mb-3 sm:mb-4">
-    {t.intro.hero}
+  <p className="text-sm sm:text-base uppercase tracking-[0.35em] text-gray-500 mb-3 sm:mb-4">
+    <span className="text-sm sm:text-base">Iness Clar</span> <span className="text-base sm:text-lg">- Architecture Portfolio</span>
   </p>
-  <h1 className="text-base text-justify sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light leading-tight mb-2 italic text-gray-800">
+  <h1 className="text-sm text-justify sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light leading-tight mb-2 italic text-gray-800">
     {t.intro.subtitle}
   </h1>
 
@@ -108,11 +108,11 @@ export default function Home() {
         <div className=" py-12 relative mx-auto">
           <div className="relative w-full">
             <Image
-              src="/images/mainpage/page_de_garde0.png"
+              src="/images/mainpage/pdg.png"
               alt="Projects overview"
-              width={1400}
-              height={800}
-              className="w-full h-auto"
+              width={1000}
+              height={600}
+              className="w-auto h-auto centered-image rounded-lg  mx-auto"
             />
             
             {/* Clickable Areas */}
