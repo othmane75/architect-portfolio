@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { NavBar } from '../components/NavBar';
+import Image from "next/image";
 import { getDictionary } from '../i18n';
 
 export default function AboutPage() {
